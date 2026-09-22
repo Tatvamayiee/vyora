@@ -20,6 +20,12 @@
     "noUnusedParameters": false
   },
   "include": [
-    "src"
+    "src/vite-env.d.ts",
+    "src/main.tsx",
+    "src/auth.tsx",
+    "src/types.ts",
+    "src/services",
+    "src/components/Layout.tsx",
+    "src/pages"
   ]
 }
