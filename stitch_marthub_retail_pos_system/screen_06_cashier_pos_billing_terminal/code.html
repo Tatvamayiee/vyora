@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f7f9fb", "on-secondary": "#ffffff", "surface-container": "#eceef0", "primary-container": "#cc4900", "outline": "#8e7166", "surface-dim": "#d8dadc", "outline-variant": "#e2bfb2", "on-tertiary-fixed": "#0d1c2f", "surface-tint": "#a73a00", "on-secondary-container": "#5c647a", "on-surface": "#191c1e", "surface-variant": "#e0e3e5", "on-tertiary-fixed-variant": "#3a485c", "inverse-primary": "#ffb599", "on-tertiary-container": "#fdfcff", "background": "#f7f9fb", "on-primary-fixed": "#370e00", "on-secondary-fixed-variant": "#3f465c", "tertiary": "#4f5d72", "on-primary-fixed-variant": "#7f2b00", "secondary-container": "#dae2fd", "secondary-fixed": "#dae2fd", "on-secondary-fixed": "#131b2e", "tertiary-container": "#67758c", "on-tertiary": "#ffffff", "primary-fixed": "#ffdbce", "on-primary": "#ffffff", "inverse-surface": "#2d3133", "error": "#ba1a1a", "primary-fixed-dim": "#ffb599", "secondary-fixed-dim": "#bec6e0", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e0e3e5", "error-container": "#ffdad6", "inverse-on-surface": "#eff1f3", "tertiary-fixed-dim": "#b9c7e0", "on-primary-container": "#fffbff", "on-error": "#ffffff", "secondary": "#565e74", "surface": "#f7f9fb", "surface-container-high": "#e6e8ea", "on-error-container": "#93000a", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "primary": "#a33900", "tertiary-fixed": "#d5e3fd", "on-surface-variant": "#5a4138" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "0.75rem", "space-lg": "1rem", "space-md": "0.75rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Inter" ], "body-md": [ "Inter" ], "display-lg": [ "Inter" ], "headline-lg": [ "Inter" ], "numeric-pos": [ "Inter" ], "label-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "numeric-pos": [ "28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-24 w-full px-space-md flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-sm text-label-sm" data-path="shift-dispatch" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Shift Dispatch</span></a><div class="h-4 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">VYORA</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">POS-04 / T-01</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">store</span><span>Indiranagar Superstore #BLR-01</span></div><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>LIVE TERMINAL ACTIVE</span></div><nav class="hidden xl:flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container-low" data-active-classes="bg-primary text-on-primary font-label-md"><a aria-current="page" class="px-space-sm py-1 rounded transition-colors bg-primary text-on-primary font-label-md" data-path="billing-terminal" href="#">Billing Counter</a><a class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="held-orders" href="#">Held Bills (2)</a><a class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="shift-dispatch" href="#">Shift Closing</a><a class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="manager-override" href="#">Supervisor Auth</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-tertiary">sync_alt</span><span>12ms Edge</span></div><span class="text-outline-variant">•</span><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-tertiary">inbox</span><span>RJ11 Ready</span></div></div><button class="flex items-center gap-1 px-space-sm py-1 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-sm text-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">phone_in_talk</span><span class="font-bold">Manager [F10]</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-surface leading-tight">Ramesh Kumar</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight text-[10px]">EMP-4482</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WoJZB4ve-SkBJx8XyXn5cbW1RDoiCChsJ0pf_dDazSfvTiEmiHsLwoKP9we5j8hhUNA6eDkgdIcobZYltGKP33PbSRrtOtxJggcQx74TEpjJq4MBpk5qo1k1_yud7CKjXGe371DEPBBtJQ-te7yHAaNDbR5SwE2gawxbrsi3dxCWIPGal26Tm58SEJe3N5OFonlF2HhVEm0WZy-nmsh9kmJWZHFfRuhhIhyu3tu5rhaCVmW_oLvDLKTjqO0m3USLRIxy2uCg6iMg"/></div></div></div><div class="flex items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low px-space-sm rounded"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1 text-on-surface"><span class="text-on-surface-variant font-body-sm">Invoice:</span><span class="font-bold font-mono text-primary">BLR-2025-09142</span></div><div class="flex items-center gap-1 text-on-surface-variant font-body-sm"><span class="material-symbols-outlined text-[14px]">schedule</span><span>Shift: 03h 42m</span></div><div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm"><span class="material-symbols-outlined text-[13px]">pause_circle</span><span>2 Held Baskets</span></div></div><div class="hidden md:flex items-center gap-space-xs text-[11px] font-label-sm text-on-surface-variant overflow-x-auto"><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F1</b> New</span><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F2</b> Scan</span><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F3</b> Loyalty</span><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F4</b> Hold</span><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F5</b> Disc</span><span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm"><b class="text-primary">F8</b> Split</span><span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-bold shadow-sm"><b class="text-on-primary">F12</b> Tender</span></div></div></div></header><main class="w-full pt-24 pb-12 bg-surface min-h-screen"><div class="flex flex-col w-full p-space-md gap-space-md">
+<!-- TOP WORKFLOW & HOTKEY BAR -->
+<div class="flex flex-col xl:flex-row items-stretch gap-space-md">
+<!-- Barcode & SKU Fast Input -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col sm:flex-row items-center gap-space-sm">
+<div class="relative flex-1 w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-primary">
+<span class="material-symbols-outlined text-[20px]">barcode_scanner</span>
+</div>
+<input class="w-full pl-10 pr-28 py-2 bg-surface-container-low text-on-surface font-mono font-semibold text-body-lg rounded outline-none focus:bg-surface-container-lowest transition-all" id="barcodeInput" placeholder="Scan Barcode [EAN-13] or Type SKU / Product Name (F2)" type="text" value="8901030948210"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center gap-1.5 pointer-events-none">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">F2</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Laser OK
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-2 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded shadow-sm flex items-center justify-center gap-1.5 active:scale-[0.99] transition-all" onclick="triggerItemAdd()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Add Item</span>
+<span class="text-[11px] opacity-80 font-mono ml-0.5">[↵]</span>
+</button>
+<button class="p-2 bg-surface-container-low hover:bg-surface-container text-on-surface-variant rounded flex items-center justify-center" title="Catalog Search (F6)" type="button">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+</button>
+</div>
+</div>
+<!-- Customer Loyalty & Privilege Card Bar -->
+<div class="xl:w-[460px] bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0 font-bold">
+<span class="material-symbols-outlined text-[20px]">loyalty</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Anita Rao</span>
+<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 font-label-sm text-[10px] font-bold">GOLD 5%</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate font-mono">
+            +91 98450 23118 • <span class="text-primary font-semibold">1,450 pts (₹145)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<label class="flex items-center gap-1.5 px-2 py-1 bg-surface-container-low hover:bg-surface-container rounded cursor-pointer select-none">
+<input checked="" class="accent-primary w-4 h-4 rounded" id="coinToggle" onchange="toggleCoinRedemption(this)" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Redeem ₹100</span>
+</label>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container rounded transition-colors" title="Unlink Customer Profile" type="button">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MAIN SPLIT BILLING INTERFACE (65% Cart / 35% Payment Summary) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- LEFT PANEL: 65% (8 Cols on Desktop) Cart Table -->
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Operational Meta Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bill:</span>
+<span class="font-mono font-bold text-on-surface">#INV-BLR-2025-09142</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">shopping_basket</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface" id="itemCountLabel">4 Items (15.45 kg gross)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary text-on-primary font-semibold flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">person</span>
+<span>Retail B2C</span>
+</button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">apartment</span>
+<span>B2B GSTIN</span>
+</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">price_change</span>
+<span>Price Tier: A</span>
+</button>
+</div>
+</div>
+<!-- Itemized Cart Grid Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 w-10">#</th>
+<th class="py-2.5 px-3 min-w-[220px]">Item Description &amp; HSN</th>
+<th class="py-2.5 px-2 text-right">MRP</th>
+<th class="py-2.5 px-2 text-right">Promo</th>
+<th class="py-2.5 px-2 text-center w-28">Qty / Unit</th>
+<th class="py-2.5 px-2 text-right">GST %</th>
+<th class="py-2.5 px-3 text-right">Net (₹)</th>
+<th class="py-2.5 px-2 text-center w-12">Act</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface" id="cartTableBody">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-3 font-mono text-label-sm text-on-surface-variant">01</td>
+<td class="py-2.5 px-3">
+<div class="font-semibold text-on-surface leading-tight">Aashirvaad Superior Sharbati Atta 5kg</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono text-[11px]">
+<span>HSN: 11010000</span>
+<span class="text-outline-variant">|</span>
+<span class="text-secondary font-sans font-medium">ITC Consumer Foods</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono">₹340.00</td>
+<td class="py-2.5 px-2 text-right">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-mono text-label-sm font-semibold">
+                    -₹25.00
+                  </span>
+</td>
+<td class="py-2.5 px-2">
+<div class="flex items-center justify-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, -1)" type="button">-</button>
+<span class="w-8 text-center font-mono font-bold text-on-surface">2</span>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, 1)" type="button">+</button>
+</div>
+<div class="text-center font-mono text-[10px] text-on-surface-variant mt-0.5">10.00 kg</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-[11px]">0% (Exempt)</span>
+</td>
+<td class="py-2.5 px-3 text-right font-mono font-bold text-on-surface">₹630.00</td>
+<td class="py-2.5 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="deleteRow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Item 2 (Active/Selected item highlight) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors group">
+<td class="py-2.5 px-3 font-mono text-label-sm text-primary font-bold">02</td>
+<td class="py-2.5 px-3">
+<div class="font-semibold text-on-surface leading-tight">Fortune Sunlite Refined Sunflower Oil 1L Pouch</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono text-[11px]">
+<span>HSN: 15121910</span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-bold">ACTIVE SCAN</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono">₹165.00</td>
+<td class="py-2.5 px-2 text-right">
+<span class="text-on-surface-variant font-mono text-label-sm">--</span>
+</td>
+<td class="py-2.5 px-2">
+<div class="flex items-center justify-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, -1)" type="button">-</button>
+<span class="w-8 text-center font-mono font-bold text-on-surface">3</span>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, 1)" type="button">+</button>
+</div>
+<div class="text-center font-mono text-[10px] text-on-surface-variant mt-0.5">3.00 Pcs</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono text-on-surface-variant">
+<span class="font-semibold text-on-surface text-[12px]">5%</span>
+<div class="text-[10px] text-on-surface-variant">CGST+SGST</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono font-bold text-on-surface">₹495.00</td>
+<td class="py-2.5 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="deleteRow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-3 font-mono text-label-sm text-on-surface-variant">03</td>
+<td class="py-2.5 px-3">
+<div class="font-semibold text-on-surface leading-tight">Tata Tea Gold Premium Blend 500g Pack</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono text-[11px]">
+<span>HSN: 09024020</span>
+<span class="text-outline-variant">|</span>
+<span class="text-amber-800 font-sans font-medium">Gold Club 10% Off</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono">₹280.00</td>
+<td class="py-2.5 px-2 text-right">
+<span class="inline-block px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-mono text-label-sm font-semibold">
+                    -₹28.00
+                  </span>
+</td>
+<td class="py-2.5 px-2">
+<div class="flex items-center justify-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, -1)" type="button">-</button>
+<span class="w-8 text-center font-mono font-bold text-on-surface">1</span>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md" onclick="adjustQty(this, 1)" type="button">+</button>
+</div>
+<div class="text-center font-mono text-[10px] text-on-surface-variant mt-0.5">0.50 kg</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono text-on-surface-variant">
+<span class="font-semibold text-on-surface text-[12px]">5%</span>
+<div class="text-[10px] text-on-surface-variant">CGST ₹6.00</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono font-bold text-on-surface">₹252.00</td>
+<td class="py-2.5 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="deleteRow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Item 4 (Weighing Scale Integration) -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-3 font-mono text-label-sm text-on-surface-variant">04</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface leading-tight">Fresh Organic Shimla Royal Apples</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">SCALE COM2</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono text-[11px]">
+<span>HSN: 08081000</span>
+<span class="text-outline-variant">|</span>
+<span>Rate: ₹180.00 / kg</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono">₹180.00</td>
+<td class="py-2.5 px-2 text-right">
+<span class="text-on-surface-variant font-mono text-label-sm">--</span>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="font-mono font-bold text-primary text-label-md bg-surface-container px-2 py-1 rounded inline-block">1.450 kg</span>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Weighed Live</div>
+</td>
+<td class="py-2.5 px-2 text-right font-mono text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-[11px]">0% (Fresh)</span>
+</td>
+<td class="py-2.5 px-3 text-right font-mono font-bold text-on-surface">₹261.00</td>
+<td class="py-2.5 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="deleteRow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Terminal Quick Action Keys Ribbon -->
+<div class="bg-surface-container-low p-space-sm flex flex-wrap items-center justify-between gap-space-xs text-on-surface">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1.5" onclick="holdCurrentBill()" type="button">
+<span class="font-mono font-bold text-primary">[F4]</span>
+<span>Hold Cart</span>
+<span class="px-1 py-0.2 rounded-full bg-secondary-container text-on-secondary-fixed text-[10px] font-bold">2</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="font-mono font-bold text-primary">[F6]</span>
+<span>Catalog Lookup</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="font-mono font-bold text-primary">[F7]</span>
+<span>Poll Scale (1.45kg)</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="font-mono font-bold text-primary">[F10]</span>
+<span>Mgr Override</span>
+</button>
+</div>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest hover:bg-error-container text-error shadow-sm font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" onclick="clearCart()" type="button">
+<span class="material-symbols-outlined text-[15px]">delete_sweep</span>
+<span class="font-mono font-bold">[F9]</span>
+<span>Void Entire Basket</span>
+</button>
+</div>
+</div>
+<!-- Quick Scan Suggestions & Recent Additions Banner -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<button class="bg-surface-container-lowest hover:bg-surface-container-low p-2 rounded-lg shadow-sm text-left flex items-center gap-2 transition-all" onclick="quickAddItem('Amul Salted Butter 500g', 285.00)" type="button">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">egg</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Amul Butter 500g</div>
+<div class="font-mono text-label-sm text-primary font-semibold">₹285.00</div>
+</div>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-low p-2 rounded-lg shadow-sm text-left flex items-center gap-2 transition-all" onclick="quickAddItem('Parle-G Gold 1kg', 110.00)" type="button">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">cookie</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Parle-G Gold 1kg</div>
+<div class="font-mono text-label-sm text-primary font-semibold">₹110.00</div>
+</div>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-low p-2 rounded-lg shadow-sm text-left flex items-center gap-2 transition-all" onclick="quickAddItem('India Gate Basmati 5kg', 540.00)" type="button">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Basmati Classic 5kg</div>
+<div class="font-mono text-label-sm text-primary font-semibold">₹540.00</div>
+</div>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-low p-2 rounded-lg shadow-sm text-left flex items-center gap-2 transition-all" onclick="quickAddItem('Nandini Toned Milk 1L', 44.00)" type="button">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Nandini Milk 1L</div>
+<div class="font-mono text-label-sm text-primary font-semibold">₹44.00</div>
+</div>
+</button>
+</div>
+</div>
+<!-- RIGHT PANEL: 35% (4 Cols on Desktop) Payment Summary & Checkout -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Financial Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">Invoice Total</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-mono">GST v3.1 Compliant</span>
+</div>
+<!-- Ledger Line Items -->
+<div class="flex flex-col gap-1.5 font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Gross Subtotal (4 lines)</span>
+<span class="font-mono font-semibold text-on-surface">₹1,663.00</span>
+</div>
+<div class="flex items-center justify-between text-on-error-container">
+<span>Item Level Promotions</span>
+<span class="font-mono font-semibold">-₹53.00</span>
+</div>
+<div class="flex items-center justify-between text-primary">
+<span class="flex items-center gap-1">
+<span>Vyora Points (1,000 pts)</span>
+<span class="material-symbols-outlined text-[14px]">stars</span>
+</span>
+<span class="font-mono font-bold" id="loyaltyDeduction">-₹100.00</span>
+</div>
+<div class="flex items-center justify-between text-[12px] opacity-75">
+<span>Staff Rebate / Coupon</span>
+<span class="font-mono">₹0.00 (Locked)</span>
+</div>
+<div class="h-px bg-surface-container-high my-1"></div>
+<div class="flex items-center justify-between text-[12px]">
+<span>Net Taxable Base Value</span>
+<span class="font-mono">₹1,486.44</span>
+</div>
+<div class="flex items-center justify-between text-[12px]">
+<span>Central GST (CGST)</span>
+<span class="font-mono text-on-surface">+₹17.78</span>
+</div>
+<div class="flex items-center justify-between text-[12px]">
+<span>State GST (SGST - Karnataka 29)</span>
+<span class="font-mono text-on-surface">+₹17.78</span>
+</div>
+<div class="flex items-center justify-between text-[12px]">
+<span>Statutory Round Off</span>
+<span class="font-mono">₹0.00</span>
+</div>
+</div>
+<!-- Grand Total Banner -->
+<div class="mt-2 p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Net Payable</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">FINAL BILL</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-numeric-pos text-[36px] text-primary font-extrabold tracking-tight leading-none" id="grandTotalDisplay">₹1,522.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Incl. all taxes</span>
+</div>
+</div>
+<!-- Fast Tender Quick Select -->
+<div class="flex flex-col gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fast Settlement Mode</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between group transition-colors" onclick="selectTender('CASH')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">payments</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">Fast Cash</div>
+<div class="text-[10px] text-on-surface-variant font-mono">Tender ₹1,550</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹28 Chg</span>
+</button>
+<button class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between group transition-colors" onclick="selectTender('UPI')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">qr_code_scanner</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">Dynamic UPI</div>
+<div class="text-[10px] text-on-surface-variant font-mono">PineLabs Screen</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">[F8]</span>
+</button>
+<button class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between group transition-colors" onclick="selectTender('CARD')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">credit_card</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">EDC Card</div>
+<div class="text-[10px] text-on-surface-variant font-mono">RuPay / Visa</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">contactless</span>
+</button>
+<button class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between group transition-colors" onclick="selectTender('SPLIT')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">call_split</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">Split Tender</div>
+<div class="text-[10px] text-on-surface-variant font-mono">Cash + UPI</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span>
+</button>
+</div>
+</div>
+<!-- Primary CTA Buttons -->
+<div class="flex flex-col gap-space-xs mt-2">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-md hover:shadow-lg active:scale-[0.99] transition-all flex items-center justify-center gap-2" onclick="completeCheckout()" type="button">
+<span>TENDER &amp; PRINT TAX INVOICE</span>
+<span class="px-2 py-0.5 rounded bg-on-primary/20 text-[12px] font-mono">[F12]</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" onclick="printProforma()" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Proforma Bill</span>
+</button>
+<button class="py-2 px-space-sm rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" onclick="holdCurrentBill()" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Hold Bill [F4]</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Parked / Held Bills Drawer Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">motion_photos_paused</span>
+<span class="font-label-md text-label-md text-on-surface">Parked Bills</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-fixed text-[11px] font-bold">2 Active</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Autosave OK</span>
+</div>
+<!-- Bill 1 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">#09138 • Walk-in Counter B</div>
+<div class="text-[11px] font-mono text-on-surface-variant">₹840.00 • 3 items • 8m ago</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary font-label-sm text-label-sm shadow-sm transition-colors" onclick="recallBill('09138')" type="button">
+            Recall
+          </button>
+</div>
+<!-- Bill 2 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">#09140 • Anita R. (Pending UPI OTP)</div>
+<div class="text-[11px] font-mono text-on-surface-variant">₹2,110.00 • 6 items • 3m ago</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary font-label-sm text-label-sm shadow-sm transition-colors" onclick="recallBill('09140')" type="button">
+            Recall
+          </button>
+</div>
+<!-- Compliance footer footnote -->
+<div class="flex items-center justify-between pt-1 text-[11px] text-on-surface-variant font-mono">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span>B2C E-Invoice Sync Ready</span>
+</span>
+<span>RJ11 Till Connected</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // POS Billing Interactive Controller
+  function adjustQty(btn, delta) {
+    const qtySpan = btn.parentElement.querySelector('span');
+    let currentQty = parseInt(qtySpan.textContent.trim(), 10) || 1;
+    let newQty = currentQty + delta;
+    if (newQty < 1) newQty = 1;
+    qtySpan.textContent = newQty;
+  }
+
+  function deleteRow(btn) {
+    const row = btn.closest('tr');
+    if (row) {
+      row.style.opacity = '0.3';
+      setTimeout(() => {
+        row.remove();
+        updateItemCount();
+      }, 150);
+    }
+  }
+
+  function updateItemCount() {
+    const count = document.querySelectorAll('#cartTableBody tr').length;
+    const label = document.getElementById('itemCountLabel');
+    if (label) label.textContent = `${count} Items in Basket`;
+  }
+
+  function toggleCoinRedemption(checkbox) {
+    const deduction = document.getElementById('loyaltyDeduction');
+    const grandTotal = document.getElementById('grandTotalDisplay');
+    if (checkbox.checked) {
+      if (deduction) deduction.textContent = '-₹100.00';
+      if (grandTotal) grandTotal.textContent = '₹1,522.00';
+    } else {
+      if (deduction) deduction.textContent = '₹0.00';
+      if (grandTotal) grandTotal.textContent = '₹1,622.00';
+    }
+  }
+
+  function triggerItemAdd() {
+    const input = document.getElementById('barcodeInput');
+    const sku = input ? input.value.trim() : '';
+    if (!sku) return;
+    quickAddItem(`Scanned Item [${sku.slice(-4)}]`, 199.00);
+    input.value = '';
+  }
+
+  function quickAddItem(name, price) {
+    const tbody = document.getElementById('cartTableBody');
+    if (!tbody) return;
+    const count = tbody.querySelectorAll('tr').length + 1;
+    const code = count < 10 ? `0${count}` : count;
+
+    const tr = document.createElement('tr');
+    tr.className = 'hover:bg-surface-container-low transition-colors group';
+    tr.innerHTML = `
+      <td class="py-2.5 px-3 font-mono text-label-sm text-on-surface-variant">${code}</td>
+      <td class="py-2.5 px-3">
+        <div class="font-semibold text-on-surface leading-tight">${name}</div>
+        <div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono text-[11px]">
+          <span>HSN: 21069099</span>
+          <span class="text-outline-variant">|</span>
+          <span class="text-secondary">Direct Fast-Add</span>
+        </div>
+      </td>
+      <td class="py-2.5 px-2 text-right font-mono">₹${price.toFixed(2)}</td>
+      <td class="py-2.5 px-2 text-right">
+        <span class="text-on-surface-variant font-mono text-label-sm">--</span>
+      </td>
+      <td class="py-2.5 px-2">
+        <div class="flex items-center justify-center gap-1">
+          <button type="button" onclick="adjustQty(this, -1)" class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md">-</button>
+          <span class="w-8 text-center font-mono font-bold text-on-surface">1</span>
+          <button type="button" onclick="adjustQty(this, 1)" class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md">+</button>
+        </div>
+        <div class="text-center font-mono text-[10px] text-on-surface-variant mt-0.5">1.00 Pc</div>
+      </td>
+      <td class="py-2.5 px-2 text-right font-mono text-on-surface-variant">
+        <span class="font-semibold text-on-surface text-[12px]">5%</span>
+      </td>
+      <td class="py-2.5 px-3 text-right font-mono font-bold text-on-surface">₹${price.toFixed(2)}</td>
+      <td class="py-2.5 px-2 text-center">
+        <button type="button" onclick="deleteRow(this)" class="text-outline hover:text-error transition-colors p-1">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+    updateItemCount();
+  }
+
+  function clearCart() {
+    const tbody = document.getElementById('cartTableBody');
+    if (tbody) {
+      tbody.innerHTML = '';
+      updateItemCount();
+    }
+  }
+
+  function selectTender(mode) {
+    const grand = document.getElementById('grandTotalDisplay').innerText;
+    alert(`Tender selected: ${mode} for ${grand}. Ready for device processing.`);
+  }
+
+  function completeCheckout() {
+    alert('Bill Settled Successfully! Printing 80mm Thermal Tax Invoice & Triggering Cash Drawer Kick.');
+  }
+
+  function holdCurrentBill() {
+    alert('Active Invoice BLR-2025-09142 moved to Parked State [F4]. Ready for next customer scan.');
+  }
+
+  function recallBill(id) {
+    alert(`Recalling Parked Bill #${id} back to active scanning session.`);
+  }
+
+  function printProforma() {
+    alert('Dispensing Quotation / Proforma summary without closing till register.');
+  }
+
+  // Keyboard hotkey listeners for fast cashier operations
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'F2') {
+      e.preventDefault();
+      const b = document.getElementById('barcodeInput');
+      if (b) {
+        b.focus();
+        b.select();
+      }
+    } else if (e.key === 'F4') {
+      e.preventDefault();
+      holdCurrentBill();
+    } else if (e.key === 'F12') {
+      e.preventDefault();
+      completeCheckout();
+    }
+  });
+</script></main><footer class="fixed bottom-0 left-0 w-full z-40 bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.04)]"><div class="h-10 w-full px-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><div class="flex items-center gap-1 text-on-surface"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-mono">SCANNER: OK</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 font-mono text-on-surface"><span>SCALE: 0.000 KG</span><span class="text-[10px] text-on-surface-variant">(COM2)</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 font-mono text-on-surface"><span>80MM PRINTER: READY</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 font-mono text-on-surface"><span>TILL: LOCKED</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1 font-body-sm text-body-sm"><span>GSTIN:</span><span class="font-mono font-semibold text-on-surface">29AABCU9603R1ZM</span></div><span class="text-outline-variant hidden sm:inline">|</span><div class="flex items-center gap-1 text-[11px] font-mono"><span class="text-primary font-bold">IND-GST v3.1</span><span>•</span><span>Vyora v4.28-prod</span></div></div></div></footer></body></html>

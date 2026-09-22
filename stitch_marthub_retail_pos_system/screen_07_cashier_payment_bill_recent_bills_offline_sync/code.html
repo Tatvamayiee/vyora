@@ -1,0 +1,828 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb599","on-primary-container":"#fffbff","on-primary-fixed":"#370e00","surface-tint":"#a73a00","surface":"#f7f9fb","on-tertiary-fixed-variant":"#3a485c","background":"#f7f9fb","surface-container-lowest":"#ffffff","surface-dim":"#d8dadc","on-primary-fixed-variant":"#7f2b00","on-error":"#ffffff","tertiary":"#4f5d72","surface-container-low":"#f2f4f6","on-tertiary":"#ffffff","outline":"#8e7166","surface-container":"#eceef0","inverse-primary":"#ffb599","on-tertiary-fixed":"#0d1c2f","outline-variant":"#e2bfb2","tertiary-container":"#67758c","on-error-container":"#93000a","surface-variant":"#e0e3e5","on-secondary-fixed":"#131b2e","on-surface-variant":"#5a4138","inverse-surface":"#2d3133","primary":"#a33900","secondary-fixed-dim":"#bec6e0","inverse-on-surface":"#eff1f3","secondary-fixed":"#dae2fd","surface-container-high":"#e6e8ea","secondary":"#565e74","on-tertiary-container":"#fdfcff","on-secondary-container":"#5c647a","primary-fixed":"#ffdbce","primary-container":"#cc4900","tertiary-fixed-dim":"#b9c7e0","secondary-container":"#dae2fd","error":"#ba1a1a","on-background":"#191c1e","on-secondary":"#ffffff","surface-container-highest":"#e0e3e5","surface-bright":"#f7f9fb","on-secondary-fixed-variant":"#3f465c","on-surface":"#191c1e","tertiary-fixed":"#d5e3fd","on-primary":"#ffffff","error-container":"#ffdad6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-sm":"0.5rem","margin":"1rem","gutter":"0.75rem","space-lg":"1rem","space-md":"0.75rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["Inter"],"body-md":["Inter"],"label-lg":["Inter"],"display-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"numeric-pos":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"numeric-pos":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest border-b border-surface-container-high shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="flex items-center justify-center w-7 h-7 bg-primary text-on-primary rounded font-headline-sm text-headline-sm font-bold">V</span><div class="flex flex-col leading-none"><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight uppercase">Vyora</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Retail OS</span></div></div><div class="h-6 w-px bg-surface-container-high mx-space-xs"></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded"><span class="material-symbols-outlined text-secondary text-base">storefront</span><div class="flex flex-col leading-none"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Indiranagar Superstore</span><span class="font-body-sm text-body-sm text-secondary">#BLR-01</span></div></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded"><span class="material-symbols-outlined text-secondary text-base">point_of_sale</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Till #04</span></div><div class="h-6 w-px bg-surface-container-high mx-space-xs"></div><a class="inline-flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="pos-billing-terminal" href="#"><span class="material-symbols-outlined text-sm">arrow_back</span><span class="">Back to Terminal</span></a></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-on-surface font-bold rounded"><a aria-current="page" class="px-space-md py-1.5 transition-colors bg-surface-container text-on-surface font-bold rounded" data-path="cashier-payment-settlement" href="#">Settlement</a><a class="px-space-md py-1.5 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="e-bill-preview" href="#">E-Bill Preview</a><a class="px-space-md py-1.5 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="recent-invoices" href="#">Recent Invoices</a><a class="px-space-md py-1.5 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="offline-edge-sync-manager" href="#">Edge Sync</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded border border-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-primary font-bold">Edge: Offline Buffer</span><span class="text-surface-variant">|</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Active Local Sync (4 Queued)</span></div><div class="flex items-center gap-space-xs pl-space-xs"><div class="text-right leading-tight"><div class="font-label-md text-label-md text-on-surface font-bold">Ramesh Kumar</div><div class="font-body-sm text-body-sm text-secondary">EMP-4482</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WoJZB4ve-SkBJx8XyXn5cbW1RDoiCChsJ0pf_dDazSfvTiEmiHsLwoKP9we5j8hhUNA6eDkgdIcobZYltGKP33PbSRrtOtxJggcQx74TEpjJq4MBpk5qo1k1_yud7CKjXGe371DEPBBtJQ-te7yHAaNDbR5SwE2gawxbrsi3dxCWIPGal26Tm58SEJe3N5OFonlF2HhVEm0WZy-nmsh9kmJWZHFfRuhhIhyu3tu5rhaCVmW_oLvDLKTjqO0m3USLRIxy2uCg6iMg"></div></div></div></header><main class="w-full pt-14 pb-10 bg-surface min-h-[calc(100vh-2.5rem)]"><div class="flex flex-col w-full">
+<!-- Real-time Retail Settlement Command Deck -->
+<div class="p-gutter flex flex-col gap-space-md">
+<!-- Top Context & Live Edge Strip -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-8 flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">shopping_cart_checkout</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Invoice #INV-BLR-2025-09142</span>
+<span class="bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded text-label-sm font-label-sm">Active Settlement</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm text-secondary">
+<span class="">Customer: <strong class="text-on-surface">Anita Rao</strong></span>
+<span class="">•</span>
+<span class="">+91 98450 23118</span>
+<span class="">•</span>
+<span class="bg-secondary-container text-on-secondary-fixed px-1.5 py-0.2 rounded font-label-sm text-label-sm">Gold Tier Shopper</span>
+</div>
+</div>
+</div>
+<!-- Safeguard Status Pill -->
+<div class="bg-surface-container px-space-md py-space-sm rounded-lg shadow-sm flex items-center gap-space-xs text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base">verified_user</span>
+<span class="text-on-surface">Max 5% Staff Discount Cap: <strong class="text-on-surface">Enforced</strong></span>
+<span class="bg-surface-container-high text-secondary px-1.5 py-0.5 rounded font-label-sm text-label-sm">[Esc] Return to POS</span>
+</div>
+</div>
+<!-- Edge Gateway Telemetry -->
+<div class="lg:col-span-4 flex items-center justify-end gap-space-sm">
+<div class="bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-sm">
+<div class="relative flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping absolute opacity-75"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary relative"></span>
+</div>
+<div class="text-right"><div class="flex items-center justify-end gap-1"><span class="font-label-sm text-label-sm text-primary font-bold">Edge Node BLR-01 [OFFLINE SIMULATION]</span></div><div class="font-body-sm text-body-sm text-secondary">4 Queued (Pushing IRN...) • SQLite Local Mesh</div></div>
+<button class="bg-surface-container-high hover:bg-surface-dim p-1.5 rounded transition-colors text-on-surface" id="btn-force-sync" title="Force Sync All [F11]">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Operational Workspace: 65% Settlement/Operations + 35% Authentic 80mm Slip -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Left 65% Interactive Tender & Payment Processing -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<!-- Big Payable Hero Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Net Payable</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-primary leading-none">₹1,522.00</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">₹1,663.00</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-body-sm text-secondary">
+<span class="text-primary font-label-sm text-label-sm">Promos Saved: ₹53.00</span>
+<span class="">•</span>
+<span class="text-primary font-label-sm text-label-sm">Pts (1000) Redeemed: ₹100.00</span>
+</div>
+</div>
+<!-- Fast Tender Mode Selector Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-upi" onclick="switchTenderTab('upi')">
+<span class="material-symbols-outlined text-base">qr_code_2</span>
+<span class="">Dynamic UPI [F1]</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all text-secondary hover:text-on-surface" id="tab-cash" onclick="switchTenderTab('cash')">
+<span class="material-symbols-outlined text-base">payments</span>
+<span class="">Cash [F2]</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all text-secondary hover:text-on-surface" id="tab-card" onclick="switchTenderTab('card')">
+<span class="material-symbols-outlined text-base">credit_card</span>
+<span class="">EDC Card [F3]</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all text-secondary hover:text-on-surface" id="tab-split" onclick="switchTenderTab('split')">
+<span class="material-symbols-outlined text-base">call_split</span>
+<span class="">Split Tender</span>
+</button>
+</div>
+</div>
+<!-- Tender Interactive Panel Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Mode 1: UPI & Dynamic PineLabs QR View -->
+<div class="flex flex-col gap-space-md" id="panel-upi">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Dynamic UPI Instant Payment</span>
+<p class="font-body-sm text-body-sm text-secondary">Customer displays or scans the PineLabs linked dual-screen QR</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1 rounded-full text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-sm animate-spin">autorenew</span>
+<span class="">Session expires in: <strong id="timer-display">02:41</strong></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center pt-space-xs">
+<!-- UPI QR Visual Code Box -->
+<div class="md:col-span-5 flex flex-col items-center justify-center p-space-md bg-surface-container-low rounded-xl">
+<div class="p-3 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col items-center">
+<!-- Simulated High Contrast QR SVG -->
+<svg class="w-44 h-44 text-on-surface" fill="currentColor" viewBox="0 0 120 120">
+<rect fill="currentColor" height="30" rx="3" width="30" x="10" y="10"></rect>
+<rect fill="white" height="20" rx="2" width="20" x="15" y="15"></rect>
+<rect fill="currentColor" height="10" rx="1" width="10" x="20" y="20"></rect>
+<rect fill="currentColor" height="30" rx="3" width="30" x="80" y="10"></rect>
+<rect fill="white" height="20" rx="2" width="20" x="85" y="15"></rect>
+<rect fill="currentColor" height="10" rx="1" width="10" x="90" y="20"></rect>
+<rect fill="currentColor" height="30" rx="3" width="30" x="10" y="80"></rect>
+<rect fill="white" height="20" rx="2" width="20" x="15" y="85"></rect>
+<rect fill="currentColor" height="10" rx="1" width="10" x="20" y="90"></rect>
+<!-- Internal Matrix Bits -->
+<rect fill="currentColor" height="8" rx="1" width="8" x="46" y="14"></rect>
+<rect fill="currentColor" height="8" rx="1" width="8" x="58" y="14"></rect>
+<rect fill="currentColor" height="8" rx="1" width="8" x="46" y="26"></rect>
+<rect fill="currentColor" height="6" rx="1" width="6" x="68" y="26"></rect>
+<rect fill="#a33900" height="24" rx="2" width="24" x="48" y="44"></rect>
+<rect fill="currentColor" height="6" rx="1" width="6" x="14" y="48"></rect>
+<rect fill="currentColor" height="8" rx="1" width="8" x="24" y="58"></rect>
+<rect fill="currentColor" height="6" rx="1" width="6" x="34" y="48"></rect>
+<rect fill="currentColor" height="8" rx="1" width="8" x="82" y="46"></rect>
+<rect fill="currentColor" height="8" rx="1" width="10" x="96" y="56"></rect>
+<rect fill="currentColor" height="6" rx="1" width="12" x="84" y="68"></rect>
+<rect fill="currentColor" height="14" rx="1" width="8" x="48" y="78"></rect>
+<rect fill="currentColor" height="8" rx="1" width="12" x="62" y="86"></rect>
+<rect fill="currentColor" height="10" rx="1" width="10" x="82" y="86"></rect>
+<rect fill="currentColor" height="18" rx="1" width="8" x="98" y="82"></rect>
+</svg>
+<div class="mt-2 text-center">
+<span class="font-label-sm text-label-sm text-secondary">UPI ID: vyora.blr01@hdfcbank</span>
+</div>
+</div>
+<div class="flex items-center justify-center gap-space-sm mt-space-sm text-secondary">
+<span class="font-label-sm text-label-sm">PhonePe</span>
+<span class="">•</span>
+<span class="font-label-sm text-label-sm">GPay</span>
+<span class="">•</span>
+<span class="font-label-sm text-label-sm">Paytm</span>
+<span class="">•</span>
+<span class="font-label-sm text-label-sm">BHIM</span>
+</div>
+</div>
+<!-- Terminal Status & Simulation -->
+<div class="md:col-span-7 flex flex-col justify-between h-full gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">PINELABS POS #04 LINK</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded font-label-sm text-label-sm">Serial: PL-9921-X</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl animate-pulse" id="upi-status-icon">radar</span>
+<span class="font-body-md text-body-md font-semibold" id="upi-status-text">Awaiting customer QR scan or UPI intent push...</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3 transition-all duration-500" id="upi-progress-bar"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-secondary">
+<span class="">Payable: ₹1,522.00</span>
+<span class="text-primary font-semibold">Txn Ref: VYO-UPI-99428</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="bg-primary hover:bg-primary-container text-on-primary py-2.5 px-space-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-all active:scale-[0.98]" onclick="simulateUpiSuccess()">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span class="">Simulate Instant UPI [F8]</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-dim text-on-surface py-2.5 px-space-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="promptUtr()">
+<span class="material-symbols-outlined text-base">pin</span>
+<span class="">Manual UTR Verify</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Mode 2: Cash Tender Calculator (Hidden by default, switched by tabs) -->
+<div class="hidden flex-col gap-space-md" id="panel-cash">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cash Tendered &amp; Drawer Calculator</span>
+<p class="font-body-sm text-body-sm text-secondary">Rapid bill tally with auto change dispenser calculations</p>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high text-on-surface hover:bg-surface-dim px-space-md py-1.5 rounded font-label-sm text-label-sm transition-colors" onclick="triggerCashDrawer()">
+<span class="material-symbols-outlined text-sm">eject</span>
+<span class="">RJ11 Drawer Kick [Ctrl+D]</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-6 flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-secondary uppercase">Quick Tender Preset</label>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="bg-surface-container-low hover:bg-surface-container py-2 rounded text-label-md font-label-md text-on-surface" onclick="setCashAmount(1522)">Exact ₹1,522</button>
+<button class="bg-surface-container-low hover:bg-surface-container py-2 rounded text-label-md font-label-md text-on-surface" onclick="setCashAmount(1550)">₹1,550</button>
+<button class="bg-surface-container-low hover:bg-surface-container py-2 rounded text-label-md font-label-md text-on-surface" onclick="setCashAmount(1600)">₹1,600</button>
+<button class="bg-surface-container-low hover:bg-surface-container py-2 rounded text-label-md font-label-md text-on-surface" onclick="addCashAmount(500)">+₹500</button>
+<button class="bg-surface-container-low hover:bg-surface-container py-2 rounded text-label-md font-label-md text-on-surface" onclick="addCashAmount(1000)">+₹1,000</button>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold py-2 rounded text-label-md font-label-md" onclick="setCashAmount(2000)">₹2,000</button>
+</div>
+<div class="mt-space-xs">
+<label class="font-label-sm text-label-sm text-secondary uppercase">Amount Received</label>
+<div class="relative mt-1">
+<span class="absolute left-3 top-2.5 font-numeric-pos text-headline-sm text-secondary">₹</span>
+<input class="w-full bg-surface-container-low text-on-surface font-numeric-pos text-numeric-pos pl-8 pr-4 py-1.5 rounded-lg outline-none focus:ring-2 focus:ring-primary" id="input-cash-tendered" oninput="calculateChange()" type="number" value="2000">
+</div>
+</div>
+</div>
+<!-- Change calculation result -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Change Return Due</span>
+<div class="font-numeric-pos text-display-lg text-primary leading-none mt-1" id="change-due-val">₹478.00</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Recommended Drawer Dispense:</div>
+</div>
+<!-- Suggested Note Breakdown -->
+<div class="grid grid-cols-2 gap-space-xs text-body-sm pt-space-xs">
+<div class="bg-surface-container-lowest px-2.5 py-1.5 rounded flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm">₹200 Notes</span>
+<strong class="text-on-surface">2 pcs</strong>
+</div>
+<div class="bg-surface-container-lowest px-2.5 py-1.5 rounded flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm">₹50 Note</span>
+<strong class="text-on-surface">1 pc</strong>
+</div>
+<div class="bg-surface-container-lowest px-2.5 py-1.5 rounded flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm">₹20 Note</span>
+<strong class="text-on-surface">1 pc</strong>
+</div>
+<div class="bg-surface-container-lowest px-2.5 py-1.5 rounded flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm">₹2 Coins</span>
+<strong class="text-on-surface">4 pcs</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mode 3: EDC Card Chip / Contactless Swipe -->
+<div class="hidden flex-col gap-space-md" id="panel-card">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">EDC Bank Card Terminal Integration</span>
+<p class="font-body-sm text-body-sm text-secondary">HDFC Plutus / Pinelabs Bridge: Swipe, Insert Chip or Tap</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm">Plutus API v4.2 Connected</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Accepted Schemes</span>
+<div class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md">
+<span class="">RuPay Debit</span>
+<span class="">•</span>
+<span class="">Visa</span>
+<span class="">•</span>
+<span class="">Mastercard</span>
+</div>
+<span class="text-body-sm text-secondary mt-2">Zero MDR for RuPay Debit Cards</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Terminal Assigned</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">HDFC-POS-0418-EDC</span>
+<span class="text-body-sm text-secondary">Batch #0081 • Host IP: 192.168.1.180</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Terminal Action</span>
+<button class="bg-on-surface text-on-primary py-2 px-space-md rounded text-label-md font-label-md flex items-center justify-center gap-1 hover:bg-inverse-surface transition-colors" onclick="triggerCardAuth()">
+<span class="material-symbols-outlined text-sm">contactless</span>
+<span class="">Send ₹1,522 to Terminal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mode 4: Split Tender Workflow -->
+<div class="hidden flex-col gap-space-md" id="panel-split">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Multi-Tender / Split Payment</span>
+<p class="font-body-sm text-body-sm text-secondary">Allocate payable amount across multiple tender channels</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Tender 1: Cash</span>
+<span class="text-label-sm font-label-sm text-secondary">Remaining: ₹1,022.00</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-numeric-pos text-label-lg text-secondary">₹</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm px-3 py-1.5 rounded outline-none" type="number" value="500">
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Tender 2: UPI / QR</span>
+<span class="text-label-sm font-label-sm text-primary font-bold">Auto-calculated</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-numeric-pos text-label-lg text-secondary">₹</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm px-3 py-1.5 rounded outline-none font-bold" readonly="" type="number" value="1022">
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Execution Bar -->
+<div class="pt-space-md mt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial bg-surface-container-high hover:bg-surface-dim text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="parkCurrentBill()">
+<span class="material-symbols-outlined text-base">pause_circle</span>
+<span class="">Park Bill [F4]</span>
+</button>
+<button class="flex-1 sm:flex-initial bg-surface-container-high hover:bg-surface-dim text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="returnToTerminal()">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span class="">Return [Esc]</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial bg-surface-container-high hover:bg-surface-dim text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="printEbillOnly()">
+<span class="material-symbols-outlined text-base">send_to_mobile</span>
+<span class="">WhatsApp Only</span>
+</button>
+<button class="flex-1 sm:flex-initial bg-primary hover:bg-primary-container text-on-primary px-space-xl py-2.5 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]" onclick="executeFinalSettlement()">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+<span class="">COMPLETE &amp; PRINT [F12]</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Shift Recent Transactions Log & Edge Sync Queue (Accordion / Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Recent Invoices Drawer -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">history</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Recent Shift Invoices (Till #04)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm">
+<button class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-semibold">All</button>
+<button class="text-secondary hover:text-on-surface px-2 py-0.5">Paid</button>
+<button class="text-secondary hover:text-on-surface px-2 py-0.5">Parked</button>
+</div>
+</div>
+<!-- Compact Grid Table -->
+<div class="flex flex-col gap-1">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low hover:bg-surface-container text-body-sm transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">#09141</span>
+<span class="text-secondary">11:28 AM</span>
+<span class="text-on-surface">Walk-in</span>
+<span class="bg-surface-container-highest text-secondary px-1.5 py-0.2 rounded font-label-sm text-label-sm">Cash</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹840.00</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm" onclick="reprintInvoice('09141')">Reprint</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">#09140</span>
+<span class="text-secondary">11:15 AM</span>
+<span class="text-on-surface">Rahul M.</span>
+<span class="bg-surface-container-highest text-secondary px-1.5 py-0.2 rounded font-label-sm text-label-sm">UPI</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹2,110.00</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm" onclick="reprintInvoice('09140')">Reprint</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">#09139</span>
+<span class="text-secondary">10:52 AM</span>
+<span class="text-on-surface">Walk-in</span>
+<span class="bg-surface-container-highest text-secondary px-1.5 py-0.2 rounded font-label-sm text-label-sm">Card</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹420.00</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm" onclick="reprintInvoice('09139')">Reprint</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">#09138</span>
+<span class="text-secondary">10:30 AM</span>
+<span class="text-on-surface">Corpo B2B (GST)</span>
+<span class="bg-surface-container-highest text-secondary px-1.5 py-0.2 rounded font-label-sm text-label-sm">NetBank</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹3,450.00</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm" onclick="reprintInvoice('09138')">Reprint</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Offline Edge Node Card -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base animate-spin">sync</span>Edge Sync Hub</span><span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Sync In-Progress (Simulated Offline)</span></div><div class="bg-surface-container-low p-2 rounded text-body-sm text-on-surface border border-surface-container-high"><div class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">wifi_off</span>Offline Simulation Active</div><div class="text-secondary text-xs mt-0.5">Local SQLite LevelDB buffering live transactions. Upstream NIC GST e-Invoice push in progress...</div></div><div class="font-body-sm text-body-sm text-secondary mt-1"><div class="flex items-center justify-between text-xs"><span class="">Buffered Queue: <strong class="text-on-surface">4 Bills Local</strong></span><span class="text-primary font-semibold">Retry: Just now</span></div><div class="text-xs text-on-surface bg-surface-container px-2 py-1 rounded mt-1 font-mono">#INV-BLR-09142 buffered locally • Batch #SYNC-8812 generating IRN</div></div><div class="mt-space-xs bg-surface-container-low p-2 rounded flex flex-col gap-1"><div class="flex justify-between text-label-sm font-label-sm text-secondary"><span class="">NIC Gateway Push Progress</span><span class="text-primary font-bold">75% (3 of 4)</span></div><div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden"><div class="bg-primary h-full w-3/4 animate-pulse"></div></div></div></div><div class="flex flex-col gap-space-xs pt-space-xs"><button class="w-full bg-primary hover:bg-primary-container text-on-primary py-2 px-space-sm rounded font-label-sm text-label-sm flex items-center justify-center gap-1.5 shadow-sm transition-colors" onclick="forceSync()"><span class="material-symbols-outlined text-sm animate-spin">sync</span><span class="">[F11] Syncing to NIC GST Portal (75% Complete)...</span></button><div class="flex items-center justify-between text-xs text-secondary px-1"><span class="">Attempt: Just now (Retrying mesh push)</span><button class="text-primary hover:underline font-semibold" onclick="downloadJsonDump()">Export Dump</button></div></div></div>
+</div>
+</div>
+<!-- Right 35% Authentic 80mm Thermal Receipt Slip Simulation -->
+<div class="xl:col-span-5 flex flex-col gap-space-sm">
+<!-- Receipt Control Strip -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">print</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">80mm Paper &amp; E-Receipt</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-2 py-1 rounded text-label-sm font-label-sm flex items-center gap-1" onclick="window.print()">
+<span class="material-symbols-outlined text-xs">local_printshop</span>
+<span class="">Cut</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-2 py-1 rounded text-label-sm font-label-sm flex items-center gap-1" onclick="sendWhatsAppReceipt()">
+<span class="material-symbols-outlined text-xs">chat</span>
+<span class="">WhatsApp</span>
+</button>
+</div>
+</div>
+<!-- The Thermal Receipt Document Container -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-md text-on-surface relative font-mono text-body-sm leading-tight select-all">
+<!-- Top Perforation Visual -->
+<div class="w-full flex justify-between overflow-hidden opacity-30 pb-space-sm -mt-space-xs">
+<span class="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
+</div>
+<!-- Store Header -->
+<div class="text-center flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold tracking-wider">VYORA SUPERSTORE</span>
+<span class="font-body-sm text-body-sm">Indiranagar Flagship • Store #BLR-01</span>
+<span class="font-body-sm text-body-sm">100 Feet Road, HAL 2nd Stage, Bengaluru 560038</span>
+<span class="font-body-sm text-body-sm">GSTIN: 29AABCU9603R1ZM | FSSAI: 11221334000451</span>
+<span class="font-body-sm text-body-sm">Phone: 080-4921-9900</span>
+</div>
+<!-- Divider -->
+<div class="my-space-xs text-center text-secondary">========================================</div>
+<!-- Bill Metadata -->
+<div class="grid grid-cols-2 text-body-sm">
+<div class="">Tax Invoice: <strong class="text-on-surface">#INV-BLR-09142</strong></div>
+<div class="text-right">Date: 24-Oct-2025</div>
+<div class="">Cashier: Ramesh (EMP-4482)</div>
+<div class="text-right">Time: 11:42:18 AM</div>
+<div class="col-span-2">POS: Till #04 (PineLabs Node)</div>
+</div>
+<!-- Customer Metadata -->
+<div class="mt-space-xs bg-surface-container-low p-space-xs rounded text-body-sm">
+<div class="">Cust: <strong>Anita Rao</strong> (+91 98450 23118)</div>
+<div class="">Tier: Gold Member • Prev Pts: 3,420</div>
+</div>
+<!-- Divider -->
+<div class="my-space-xs text-center text-secondary">----------------------------------------</div>
+<!-- Line Items Table -->
+<table class="w-full text-body-sm">
+<thead>
+<tr class="text-secondary text-left font-label-sm text-label-sm">
+<th class="pb-1">ITEM / HSN</th>
+<th class="pb-1 text-center">QTY</th>
+<th class="pb-1 text-right">RATE</th>
+<th class="pb-1 text-right">TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<!-- Line 1 -->
+<tr>
+<td class="font-bold pt-1" colspan="4">Aashirvaad Shudh Chakki Atta 5kg</td>
+</tr>
+<tr class="text-secondary">
+<td class="">HSN: 11010000 (0% GST)</td>
+<td class="text-center">2.00</td>
+<td class="text-right">₹315.00</td>
+<td class="text-right text-on-surface font-semibold">₹630.00</td>
+</tr>
+<!-- Line 2 -->
+<tr>
+<td class="font-bold pt-1.5" colspan="4">Fortune Sunlite Refined Oil 1L</td>
+</tr>
+<tr class="text-secondary">
+<td class="">HSN: 15121910 (5% GST)</td>
+<td class="text-center">3.00</td>
+<td class="text-right">₹165.00</td>
+<td class="text-right text-on-surface font-semibold">₹495.00</td>
+</tr>
+<!-- Line 3 -->
+<tr>
+<td class="font-bold pt-1.5" colspan="4">Tata Tea Gold Rich Aroma 500g</td>
+</tr>
+<tr class="text-secondary">
+<td class="">HSN: 09024020 (5% GST)</td>
+<td class="text-center">1.00</td>
+<td class="text-right">₹252.00</td>
+<td class="text-right text-on-surface font-semibold">₹252.00</td>
+</tr>
+<!-- Line 4 -->
+<tr>
+<td class="font-bold pt-1.5" colspan="4">Shimla Royal Red Apples (Loose)</td>
+</tr>
+<tr class="text-secondary">
+<td class="">HSN: 08081000 (0% GST)</td>
+<td class="text-center">1.450 kg</td>
+<td class="text-right">₹180.00</td>
+<td class="text-right text-on-surface font-semibold">₹261.00</td>
+</tr>
+</tbody>
+</table>
+<!-- Divider -->
+<div class="my-space-xs text-center text-secondary">----------------------------------------</div>
+<!-- Financial Calculation Breakdown -->
+<div class="flex flex-col gap-0.5 text-body-sm">
+<div class="flex justify-between">
+<span class="">Gross Item Subtotal:</span>
+<span class="">₹1,638.00</span>
+</div>
+<div class="flex justify-between text-primary">
+<span class="">Festival Diw-Offer (Auto Promo):</span>
+<span class="">-₹53.00</span>
+</div>
+<div class="flex justify-between text-primary">
+<span class="">Loyalty Points Redeemed (1000 Pts):</span>
+<span class="">-₹100.00</span>
+</div>
+<div class="flex justify-between">
+<span class="">Taxable Total:</span>
+<span class="">₹1,486.44</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span class="">CGST (2.5% on Applicable Goods):</span>
+<span class="">₹17.78</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span class="">SGST (2.5% on Applicable Goods):</span>
+<span class="">₹17.78</span>
+</div>
+<div class="flex justify-between font-bold text-headline-sm text-headline-sm pt-1 mt-1 border-t border-surface-container">
+<span class="">NET TOTAL AMOUNT:</span>
+<span class="text-primary">₹1,522.00</span>
+</div>
+</div>
+<!-- Divider -->
+<div class="my-space-xs text-center text-secondary">========================================</div>
+<!-- Tender Specifics on Receipt -->
+<div class="text-body-sm flex flex-col gap-0.5">
+<div class="flex justify-between">
+<span class="">TENDER TYPE:</span>
+<strong id="receipt-tender-label">UPI / PINELABS DYNAMIC QR</strong>
+</div>
+<div class="flex justify-between">
+<span class="">STATUS:</span>
+<strong class="text-primary">SETTLED &amp; CONFIRMED</strong>
+</div>
+<div class="flex justify-between">
+<span class="">TRANSACTION RRN / UTR:</span>
+<span class="">529810992418</span>
+</div>
+<div class="flex justify-between">
+<span class="">LOYALTY BALANCE NOW:</span>
+<span class="">2,420 Pts + 15 Pts Earned</span>
+</div>
+</div>
+<!-- IRN / E-Invoice Validation Barcode & QR Simulation -->
+<div class="my-space-sm p-space-xs bg-surface-container-low rounded flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold">GST E-INVOICE VERIFIED</span>
+<span class="text-[10px] text-secondary">IRN: 8a4b7...2f019 (NIC Edge Sync)</span>
+<span class="text-[10px] text-secondary">Signed QR &amp; Digital Signature OK</span>
+</div>
+<div class="p-1 bg-surface-container-lowest rounded">
+<!-- Mini IRN QR Simulation -->
+<svg class="w-12 h-12 text-on-surface" fill="currentColor" viewBox="0 0 24 24">
+<rect height="6" width="6" x="2" y="2"></rect>
+<rect height="6" width="6" x="16" y="2"></rect>
+<rect height="6" width="6" x="2" y="16"></rect>
+<rect height="4" width="4" x="10" y="4"></rect>
+<rect height="4" width="4" x="4" y="10"></rect>
+<rect height="4" width="4" x="10" y="10"></rect>
+<rect height="4" width="4" x="16" y="10"></rect>
+<rect height="4" width="4" x="10" y="16"></rect>
+<rect height="6" width="6" x="16" y="16"></rect>
+</svg>
+</div>
+</div>
+<!-- Thermal Barcode Simulation for Returns -->
+<div class="flex flex-col items-center justify-center my-space-xs">
+<div class="h-9 w-4/5 flex items-center justify-between px-1">
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-1.5 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-2 h-full bg-on-surface inline-block"></span>
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-2 h-full bg-on-surface inline-block"></span>
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-2 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-1.5 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+<span class="w-2 h-full bg-on-surface inline-block"></span>
+<span class="w-1 h-full bg-on-surface inline-block"></span>
+<span class="w-0.5 h-full bg-on-surface inline-block"></span>
+</div>
+<span class="font-label-sm text-label-sm tracking-widest mt-0.5">INV-BLR-2025-09142</span>
+</div>
+<!-- Eco Footer -->
+<div class="text-center text-body-sm text-secondary pt-space-xs border-t border-surface-container">
+<div class="">Save Paper • Save Trees</div>
+<div class="">E-Bill sent to WhatsApp <strong>+91 98450 23118</strong></div>
+<div class="">View in Vyora Customer App for 24-hr easy exchange</div>
+<div class="font-bold text-on-surface mt-1">*** THANK YOU FOR SHOPPING WITH US ***</div>
+</div>
+<!-- Bottom Visual Perforation -->
+<div class="w-full flex justify-between overflow-hidden opacity-30 pt-space-sm -mb-space-xs">
+<span class="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
+</div>
+</div>
+<!-- Receipt Delivery Confirmation Toast Banner -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between" id="toast-notification">
+<div class="flex items-center gap-space-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-base">mark_email_read</span>
+<span class="">E-Bill auto-dispatched to Anita Rao</span>
+</div>
+<span class="bg-surface-container-high text-secondary px-2 py-0.5 rounded text-label-sm font-label-sm">Delivered</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Settlement Confirmation Modal (Hidden Overlay) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="modal-settle-confirm">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl shadow-2xl p-space-xl flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-2xl">task_alt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Bill Settled Successfully!</h3>
+<p class="font-body-md text-body-md text-secondary mt-1">Invoice #INV-BLR-2025-09142 has been committed, thermal print sent to EPSON TM-T82III, and drawer closed.</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-1 text-body-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Amount Collected:</span>
+<strong class="text-on-surface">₹1,522.00</strong>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Payment Method:</span>
+<strong class="text-primary" id="modal-method-text">UPI Instant Transfer</strong>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Customer Loyalty Points:</span>
+<strong class="text-on-surface">2,435 pts (+15 earned)</strong>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-2">
+<button class="flex-1 bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-lg font-label-md text-label-md font-bold transition-all" onclick="startNextOrder()">
+          Next Checkout [Space]
+        </button>
+<button class="bg-surface-container-high hover:bg-surface-dim text-on-surface py-2.5 px-space-md rounded-lg font-label-md text-label-md transition-colors" onclick="closeModal()">
+          View Slip
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla Terminal Controller Logic -->
+<script>
+  // Tender Tab Switching
+  function switchTenderTab(mode) {
+    const tabs = ['upi', 'cash', 'card', 'split'];
+    tabs.forEach(t => {
+      const panel = document.getElementById('panel-' + t);
+      const tabBtn = document.getElementById('tab-' + t);
+      if (t === mode) {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        tabBtn.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all bg-surface-container-lowest text-primary shadow-sm';
+      } else {
+        panel.classList.add('hidden');
+        panel.classList.remove('flex');
+        tabBtn.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all text-secondary hover:text-on-surface';
+      }
+    });
+
+    const receiptTenderLabel = document.getElementById('receipt-tender-label');
+    if (mode === 'upi') receiptTenderLabel.textContent = 'UPI / PINELABS DYNAMIC QR';
+    if (mode === 'cash') receiptTenderLabel.textContent = 'CASH DRAWER TENDERED';
+    if (mode === 'card') receiptTenderLabel.textContent = 'EDC CARD (CHIP/SWIPE)';
+    if (mode === 'split') receiptTenderLabel.textContent = 'SPLIT: CASH + UPI';
+  }
+
+  // Cash Calculation Engine
+  const payableAmount = 1522.00;
+  function setCashAmount(val) {
+    document.getElementById('input-cash-tendered').value = val;
+    calculateChange();
+  }
+
+  function addCashAmount(val) {
+    const curr = parseFloat(document.getElementById('input-cash-tendered').value) || 0;
+    document.getElementById('input-cash-tendered').value = curr + val;
+    calculateChange();
+  }
+
+  function calculateChange() {
+    const received = parseFloat(document.getElementById('input-cash-tendered').value) || 0;
+    const change = Math.max(0, received - payableAmount);
+    document.getElementById('change-due-val').innerHTML = '₹' + change.toFixed(2);
+  }
+
+  // UPI Simulation
+  function simulateUpiSuccess() {
+    const statusIcon = document.getElementById('upi-status-icon');
+    const statusText = document.getElementById('upi-status-text');
+    const progressBar = document.getElementById('upi-progress-bar');
+
+    statusIcon.textContent = 'check_circle';
+    statusIcon.classList.remove('text-primary', 'animate-pulse');
+    statusIcon.classList.add('text-primary');
+    statusText.textContent = 'PineLabs Webhook Confirmed! UTR: 529810992418';
+    progressBar.style.width = '100%';
+
+    setTimeout(() => {
+      executeFinalSettlement();
+    }, 600);
+  }
+
+  function promptUtr() {
+    const utr = prompt('Enter Bank UTR / Transaction Reference (12 digits):', '529810992418');
+    if (utr) {
+      alert('UTR ' + utr + ' verified with Razorpay Edge Gateway.');
+      executeFinalSettlement();
+    }
+  }
+
+  function triggerCashDrawer() {
+    alert('RJ11 Command sent to EPSON Drawer Kick Pin #2. Cash Drawer ejected.');
+  }
+
+  function triggerCardAuth() {
+    alert('Transmitting ₹1,522.00 to HDFC-POS-0418-EDC terminal. Tap or insert customer card now.');
+  }
+
+  function parkCurrentBill() {
+    alert('Invoice #INV-BLR-09142 parked successfully in Local Hold Slot #02. Till ready for next customer.');
+    window.location.reload();
+  }
+
+  function returnToTerminal() {
+    alert('Returning to active POS billing scanner terminal.');
+  }
+
+  function printEbillOnly() {
+    alert('Digital E-Bill sent to WhatsApp (+91 98450 23118). Thermal paper print bypassed.');
+  }
+
+  function executeFinalSettlement() {
+    const modal = document.getElementById('modal-settle-confirm');
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('modal-settle-confirm').classList.add('hidden');
+  }
+
+  function startNextOrder() {
+    closeModal();
+    alert('Starting new transaction on Till #04...');
+    window.location.reload();
+  }
+
+  function forceSync() {
+    const btn = document.getElementById('btn-force-sync');
+    btn.classList.add('animate-spin');
+    setTimeout(() => {
+      btn.classList.remove('animate-spin');
+      alert('All 3 local GST invoices synced to Karnataka NIC E-Way Portal.');
+    }, 900);
+  }
+
+  function downloadJsonDump() {
+    const data = {
+      invoice: 'INV-BLR-2025-09142',
+      customer: 'Anita Rao',
+      payable: 1522.00,
+      timestamp: new Date().toISOString()
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'vyora-pos-09142-dump.json';
+    a.click();
+  }
+
+  function reprintInvoice(invNum) {
+    alert('Sending reprint job for Invoice #' + invNum + ' to EPSON TM-T82III...');
+  }
+
+  function sendWhatsAppReceipt() {
+    alert('Direct WhatsApp invoice message sent to +91 98450 23118 with PDF link.');
+  }
+
+  // Keyboard Shortcuts Listener for High-Velocity Cashiering
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12') {
+      e.preventDefault();
+      executeFinalSettlement();
+    } else if (e.key === 'F8') {
+      e.preventDefault();
+      simulateUpiSuccess();
+    } else if (e.key === 'F1') {
+      e.preventDefault();
+      switchTenderTab('upi');
+    } else if (e.key === 'F2') {
+      e.preventDefault();
+      switchTenderTab('cash');
+    } else if (e.key === 'F3') {
+      e.preventDefault();
+      switchTenderTab('card');
+    } else if (e.key === 'F4') {
+      e.preventDefault();
+      parkCurrentBill();
+    } else if (e.key === 'F11') {
+      e.preventDefault();
+      forceSync();
+    } else if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+</script></main><footer class="fixed bottom-0 left-0 right-0 w-full z-40 bg-surface-container-lowest border-t border-surface-container-high"><div class="h-10 w-full px-gutter flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span class="">Terminal: <strong class="text-on-surface">POS-BLR-04</strong></span><span class="text-surface-variant">•</span><span class="">Gateway: <strong class="text-on-surface">UPI / Razorpay Edge / HDFC POS</strong></span><span class="text-surface-variant">•</span><span class="">Thermal Printer: <strong class="text-on-surface">EPSON TM-T82III (Online)</strong></span><span class="text-surface-variant">•</span><span class="">Local Cache: <strong class="text-on-surface">SQLite EdgeDB v3.2.1</strong></span></div><div class="flex items-center gap-space-lg"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">wifi</span><span class="">Mesh Sync Active</span></span><span class="">Shift #02 • Net Drawer: <strong class="text-on-surface">₹42,850.00</strong></span><span class="">[F12] Quick Settle</span></div></div></footer>
+
+</body></html>

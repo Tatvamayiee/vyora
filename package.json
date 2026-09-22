@@ -1,0 +1,25 @@
+{
+  "name": "vyora-retail",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup:db": "node scripts/create-db.mjs",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "migrate": "npm --prefix server run prisma:deploy",
+    "seed": "npm --prefix server run seed",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n server,client -c red,blue \"npm run dev:server\" \"npm run dev:client\"",
+    "postinstall": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "prisma": "^5.22.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@supabase/supabase-js": "^2.116.0",
+    "bcryptjs": "^3.0.3",
+    "pg": "^8.23.0"
+  }
+}

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#ffb599", "on-tertiary": "#ffffff", "on-tertiary-container": "#fdfcff", "on-secondary": "#ffffff", "tertiary": "#4f5d72", "tertiary-fixed": "#d5e3fd", "outline": "#8e7166", "secondary-fixed": "#dae2fd", "inverse-on-surface": "#eff1f3", "on-secondary-container": "#5c647a", "on-primary-container": "#fffbff", "tertiary-container": "#67758c", "primary-container": "#cc4900", "background": "#f7f9fb", "secondary-container": "#dae2fd", "on-error-container": "#93000a", "surface-container-high": "#e6e8ea", "on-secondary-fixed-variant": "#3f465c", "surface-container-lowest": "#ffffff", "surface": "#f7f9fb", "on-error": "#ffffff", "on-tertiary-fixed": "#0d1c2f", "surface-container-highest": "#e0e3e5", "on-primary-fixed-variant": "#7f2b00", "on-tertiary-fixed-variant": "#3a485c", "outline-variant": "#e2bfb2", "primary-fixed": "#ffdbce", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#bec6e0", "surface-container": "#eceef0", "surface-container-low": "#f2f4f6", "tertiary-fixed-dim": "#b9c7e0", "surface-tint": "#a73a00", "on-surface": "#191c1e", "surface-dim": "#d8dadc", "error": "#ba1a1a", "surface-variant": "#e0e3e5", "on-surface-variant": "#5a4138", "on-primary-fixed": "#370e00", "on-background": "#191c1e", "secondary": "#565e74", "inverse-surface": "#2d3133", "primary-fixed-dim": "#ffb599", "primary": "#a33900", "error-container": "#ffdad6", "on-secondary-fixed": "#131b2e", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem" }, "fontFamily": { "label-lg": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "numeric-pos": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "numeric-pos": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-surface-container-lowest border-b border-surface-container-high shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pr-space-md border-r border-surface-container-high"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">V</div><div><span class="font-label-lg text-label-lg text-on-surface tracking-tight block leading-tight">Vyora Retail OS</span><span class="font-label-sm text-label-sm text-on-surface-variant block leading-tight">Owner Command Center</span></div></div><div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded-lg border border-surface-container-high"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Store Cluster</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-1 leading-tight"><option value="all">All Branches (5 Active Stores)</option><option value="blr01">Indiranagar Flagship #BLR-01</option><option value="blr02">Koramangala Hub #BLR-02</option><option value="blr03">Whitefield Supercenter #BLR-03</option><option value="blr04">HSR Layout Store #BLR-04</option><option value="blr05">Jayanagar Express #BLR-05</option></select></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container border border-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">calendar_today</span><span class="font-label-md text-label-md text-on-surface">FY 2024-25 • Q3 Oct 2025</span><span class="ml-space-xs font-label-sm text-label-sm px-1 rounded bg-secondary-container text-on-secondary-container uppercase">₹ INR</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">5/5 Edge Nodes Online</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-secondary font-semibold">99.98% Uptime</span></div><div class="flex items-center gap-1"><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center rounded-full font-bold">3</span></button><button aria-label="System Settings" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div><div class="flex items-center gap-space-sm pl-space-md border-l border-surface-container-high"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1WoJZB4ve-SkBJx8XyXn5cbW1RDoiCChsJ0pf_dDazSfvTiEmiHsLwoKP9we5j8hhUNA6eDkgdIcobZYltGKP33PbSRrtOtxJggcQx74TEpjJq4MBpk5qo1k1_yud7CKjXGe371DEPBBtJQ-te7yHAaNDbR5SwE2gawxbrsi3dxCWIPGal26Tm58SEJe3N5OFonlF2HhVEm0WZy-nmsh9kmJWZHFfRuhhIhyu3tu5rhaCVmW_oLvDLKTjqO0m3USLRIxy2uCg6iMg"/><div class="hidden md:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface leading-tight">Vikramaditya Rao</span><span class="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-primary-fixed text-on-primary-fixed-variant leading-none">Super Admin</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Founder &amp; MD • Vyora Enterprises</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 z-40 bg-surface-container-lowest border-r border-surface-container-high flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs"><div class="px-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations Terminal</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard-and-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Dashboard &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="inventory-and-catalog" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Catalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stock-operations-and-issues" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Stock Operations &amp; Issues</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="promotions-and-offers" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions &amp; Offers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-and-branches" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Staff &amp; Branches</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="financial-reports-and-tax" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Financial Reports &amp; Tax</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-audit-and-pos-health" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span>System Audit &amp; POS Health</span></a></nav></div><div class="px-space-md pt-space-sm border-t border-surface-container-high"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">POS Sync Heartbeat</span><span class="font-label-sm text-label-sm text-emerald-700 font-bold">Synced</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[94%]"></div></div><span class="font-label-sm text-[10px] text-outline leading-none">Last poll: 12 seconds ago</span></div></div></aside><div class="pl-60"><div class="fixed top-14 left-60 right-0 h-12 z-30 bg-surface border-b border-surface-container-high flex items-center justify-between px-margin shadow-[0_1px_2px_rgba(15,23,42,0.03)]"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Range:</span><div class="inline-flex rounded-lg border border-surface-container-high bg-surface-container-lowest p-0.5" role="group"><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">Today</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">This Week</button><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-secondary text-on-secondary font-semibold" type="button">This Month</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">FY 2024-25</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1" type="button"><span>Custom</span><span class="material-symbols-outlined text-[14px]">date_range</span></button></div></div><div class="flex items-center gap-space-sm"><button class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg border border-surface-container-high bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-primary">download</span><span>Export Summary [PDF/XLSX]</span></button><button class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest border border-surface-container-high font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-secondary">autorenew</span><span>Refresh Feeds</span></button></div></div><main class="w-full pt-28 px-margin pb-12 bg-background min-h-screen"><div class="flex flex-col w-full">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const activeLink = document.querySelector('aside a[data-path="stock-operations-and-issues"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-on-surface-variant', 'hover:bg-surface-container');
+        activeLink.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+      }
+    });
+  </script>
+<div class="flex flex-col gap-space-lg w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center p-1">
+<img alt="Vyora Retail Brand Mark" class="w-full h-full object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBivQBjj-qbERFcY6bwZjYqrzqwZDRCRf_YzgT1_jEbouwZCgBkuK-hXvntKrTI0TI1cvU7V9ne7WTnBw_zuKG1PBpDmMkNEQ90BuwHIF1iljq55WwRMeE9ATcWwikKXNNl2eXmQ1VrSi-PQhkA5s9gn4Aoa1zscD8FLefXgtaVACpks806UsscpXrmva1UNlrZlRt_uPj3Kp3Kyti7XjSC326q3b5MDY6glLi0wysYsqJEWRqP2dg3Vg-kWGvpkO5rIDw"/>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Enterprise Log &amp; Supply Dispatch</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">NODE: BLR-CENTRAL</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Stock Operations &amp; Issues Desk</h1>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New PO</span>
+<span class="font-label-sm text-[10px] bg-white/20 px-1 py-0.2 rounded ml-1">F2</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">fact_check</span>
+<span>Quick GRN Entry</span>
+<span class="font-label-sm text-[10px] bg-surface-container-high text-on-surface-variant px-1 py-0.2 rounded ml-1">F3</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync_alt</span>
+<span>Initiate Transfer</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Log Damaged Stock</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Open POs (In-Transit)</span>
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">6</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Active POs</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">₹4,82,000</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">2 Arriving Today</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 On-Route</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Pending GRN Approvals</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">task</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">3</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Batches</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">₹1,95,450</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">flag</span>1 Discrepancy
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Matched</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Intra-Branch (IBT)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horizontal_circle</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">4</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Requests</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">2 In-Transit</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">2 Pending Pickup</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-medium">0 Delays</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Shrinkage &amp; Damage</span>
+<span class="material-symbols-outlined text-outline text-[20px]">delete_sweep</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">₹24,180</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">0.38% of Stock Value</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Safe &lt;0.75% Max</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14 Events</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Vendor Lead SLA</span>
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">98.4%</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-medium">On-Time</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Avg Lead: 21.6 Hrs</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Top FMCG: Adani, Amul</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">12 Vendors</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm flex-wrap gap-space-sm">
+<div class="inline-flex rounded-lg bg-surface-container-low p-1 gap-1" id="operationTabs">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary font-semibold shadow-xs">Purchase Orders (6)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">GRN &amp; Variance (3)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">Intra-Branch Transfers (4)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">Shrinkage &amp; RTV (8)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">Vendor Debit Notes</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined text-secondary absolute left-2.5 top-2 text-[18px]">search</span>
+<input class="h-9 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest w-64 shadow-xs" placeholder="Filter POs, GRN, Barcode... [Ctrl+F]" type="text"/>
+</div>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container flex items-center justify-center shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Purchase Order Roster</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Procurement stream linked to AI Auto-Replenishment Engine</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Showing 5 of 6 active</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-2 px-space-sm font-semibold rounded-l">PO ID / Time</th>
+<th class="py-2 px-space-sm font-semibold">Vendor</th>
+<th class="py-2 px-space-sm font-semibold">Target Hub</th>
+<th class="py-2 px-space-sm font-semibold text-right">Net Value</th>
+<th class="py-2 px-space-sm font-semibold">Delivery SLA</th>
+<th class="py-2 px-space-sm font-semibold text-center rounded-r">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<tr class="bg-primary-fixed/30 hover:bg-primary-fixed/50 cursor-pointer transition-colors shadow-xs">
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-primary inline-block"></span>
+<div>
+<span class="font-label-md text-label-md font-bold text-primary">PO-2025-1048</span>
+<span class="block text-[10px] text-on-surface-variant font-mono">Today, 09:42 AM</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Adani Wilmar Bengaluru</span>
+<span class="text-[10px] text-secondary font-mono">VEN-ADW-04 • FMCG/Edible</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">#BLR-01 Indiranagar</span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹39,900</span>
+<span class="block text-[10px] text-outline">Incl 5% GST</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="text-on-surface font-medium block">Tomorrow 08:30 AM</span>
+<span class="text-[10px] text-emerald-700">AI Scheduled Priority</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>Pending Owner
+                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">PO-2025-1047</span>
+<span class="block text-[10px] text-on-surface-variant font-mono">Yesterday, 04:15 PM</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Amul Dairy (GCMMF)</span>
+<span class="text-[10px] text-secondary font-mono">VEN-AMU-01 • Dairy/Chilled</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">#BLR-02 Koramangala</span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹64,200</span>
+<span class="block text-[10px] text-outline">Exempt/5% GST</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="text-on-surface font-medium block">Today 11:00 AM</span>
+<span class="text-[10px] text-blue-700">Dock Arrival Imminent</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></span>In-Transit
+                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">PO-2025-1046</span>
+<span class="block text-[10px] text-on-surface-variant font-mono">Yesterday, 11:20 AM</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">ITC Staples &amp; Spices</span>
+<span class="text-[10px] text-secondary font-mono">VEN-ITC-09 • Dry Grocery</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">#BLR-03 Whitefield</span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹1,18,400</span>
+<span class="block text-[10px] text-outline">Incl 5% GST</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="text-on-surface font-medium block">Oct 26, 04:00 PM</span>
+<span class="text-[10px] text-secondary">Standard Dispatch</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>Approved EDI
+                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">PO-2025-1045</span>
+<span class="block text-[10px] text-on-surface-variant font-mono">Oct 23, 02:40 PM</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Hindustan Unilever (HUL)</span>
+<span class="text-[10px] text-secondary font-mono">VEN-HUL-02 • Personal Care</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">#BLR-04 HSR Layout</span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹1,82,300</span>
+<span class="block text-[10px] text-outline">Incl 18% GST</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="text-on-surface font-medium block">Oct 24, Recvd</span>
+<span class="text-[10px] text-emerald-700">GRN-8840 Created</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Received Dock
+                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">PO-2025-1044</span>
+<span class="block text-[10px] text-on-surface-variant font-mono">Oct 22, 06:10 PM</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Tata Consumer Products</span>
+<span class="text-[10px] text-secondary font-mono">VEN-TAT-06 • Tea &amp; Pulses</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-mono">#BLR-05 Jayanagar</span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹77,200</span>
+<span class="block text-[10px] text-outline">Incl 5% GST</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="text-on-surface font-medium block">Oct 25, 05:00 PM</span>
+<span class="text-[10px] text-blue-700">Dispatched Bangalore DC</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>In-Transit
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">two_wheeler</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Intra-Branch Transfer (IBT)</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">In-Transit</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-mono">IBT-092 • Internal Move</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">ETA: 45 mins</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md">
+<span>Koramangala (#BLR-02)</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">arrow_forward</span>
+<span class="text-primary font-bold">Indiranagar (#BLR-01)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Bridge supply: <strong class="text-on-surface">20 units Fortune Oil 1L</strong> to avoid aisle stockout prior to tomorrow's bulk PO arrival.
+              </p>
+<div class="flex items-center justify-between text-[11px] text-secondary pt-1">
+<span>Vehicle: Store Van #KA-03-E-8812</span>
+<span>Driver: Raghu K.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 other pending store requests</span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">View Transfer Desk →</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">report</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">GRN Variance Alert</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-bold">Debit Auto-Created</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-mono">GRN-8842 • Amul GCMMF</span>
+<span class="font-label-sm text-label-sm text-error font-bold">-4 Packets Leakage</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface">
+<span>Amul Taaza Milk 500ml</span>
+<span>Recvd: <strong class="text-on-surface font-mono">116</strong> / 120 Ordered</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Transit compression breach. Barcode lot rejected at dock. Credit Note #DN-AMUL-449 generated for ₹128.00.
+              </p>
+<div class="flex items-center justify-between text-[11px] text-secondary pt-1">
+<span>Verified by: S. Deshmukh (Store Mgr)</span>
+<span class="text-emerald-700 font-semibold">FIFO Accepted</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reconciliation auto-synced to Tally</span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Inspect Voucher →</button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -m-space-md p-space-md rounded-t-xl">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary text-on-primary font-mono font-bold">PO-2025-1048</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-semibold">AI Calculated Reorder</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Adani Wilmar Bengaluru Hub</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">GSTIN: 29AAACA2101M1Z2 • Vendor Code: VEN-ADW-04</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Gross Net Total</span>
+<span class="font-numeric-pos text-[24px] font-bold text-primary">₹39,900</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span class="font-label-sm text-label-sm text-on-surface">Target Delivery: <strong>Indiranagar Flagship (#BLR-01)</strong></span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Direct Dock Drop</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Replenishment Rationale (From Inventory Screen 09)</span>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-amber-800 text-[18px] shrink-0 mt-0.5">crisis_alert</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Triggered by critical stock dip below safety floor (8 units remaining vs 45 threshold) following high Diwali promotional velocity in Sector 4.
+              </p>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Order Line Items</span>
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-[11px] uppercase">
+<th class="py-1.5 px-space-sm">SKU / Item</th>
+<th class="py-1.5 px-space-sm text-center">QTY</th>
+<th class="py-1.5 px-space-sm text-right">Unit Rate</th>
+<th class="py-1.5 px-space-sm text-right">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container/50">
+<td class="py-2 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Fortune Sunlite Refined Oil 1L</span>
+<span class="text-[10px] text-secondary font-mono">8906007280014 • HSN 1512</span>
+</td>
+<td class="py-2 px-space-sm text-center font-mono font-bold text-on-surface">250 pkts</td>
+<td class="py-2 px-space-sm text-right font-mono text-on-surface">₹118.00</td>
+<td class="py-2 px-space-sm text-right font-mono font-bold text-on-surface">₹29,500.00</td>
+</tr>
+<tr class="hover:bg-surface-container/50">
+<td class="py-2 px-space-sm">
+<span class="font-semibold text-on-surface block leading-tight">Fortune Besan (Gram Flour) 1kg</span>
+<span class="text-[10px] text-secondary font-mono">8906007281455 • HSN 1106</span>
+</td>
+<td class="py-2 px-space-sm text-center font-mono font-bold text-on-surface">100 pkts</td>
+<td class="py-2 px-space-sm text-right font-mono text-on-surface">₹85.00</td>
+<td class="py-2 px-space-sm text-right font-mono font-bold text-on-surface">₹8,500.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1 text-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Item Taxable Subtotal:</span>
+<span class="font-mono text-on-surface">₹38,000.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>CGST (2.5%):</span>
+<span class="font-mono text-on-surface">₹950.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>SGST (2.5%):</span>
+<span class="font-mono text-on-surface">₹950.00</span>
+</div>
+<div class="flex justify-between text-on-surface font-headline-sm text-headline-sm pt-1">
+<span>Final Payable PO Value:</span>
+<span class="font-mono font-bold text-primary">₹39,900.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2.5 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Approve &amp; Transmit EDI</span>
+<span class="font-label-sm text-[10px] bg-white/20 px-1 py-0.2 rounded ml-1">Alt+A</span>
+</button>
+<button class="py-2.5 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-high transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">print</span>
+<span>PDF PO</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+<span>Generated by AI Auto-PO at 09:42:11</span>
+<span>Awaiting: Vikramaditya Rao Sign-off</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">barcode_scanner</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">FIFO Batch Verification Quick Dock</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Scanner: ONLINE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Incoming stock is validated against lot expiry tables before posting to retail counters.
+          </p>
+<div class="flex items-center gap-space-sm">
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-mono text-body-sm w-full focus:outline-none focus:bg-surface-container-lowest shadow-xs" placeholder="Scan Item Barcode / EAN-13 to test lot..." type="text"/>
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md shrink-0" type="button">Scan</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Shrinkage, Damage &amp; Return to Vendor (RTV) Audit Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time loss tracking with manager digital authorization</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export RTV Register</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-2 px-space-sm rounded-l">Incident #</th>
+<th class="py-2 px-space-sm">Branch</th>
+<th class="py-2 px-space-sm">Item Details</th>
+<th class="py-2 px-space-sm">Audit Reason Code</th>
+<th class="py-2 px-space-sm text-center">Units Lost</th>
+<th class="py-2 px-space-sm text-right">Value (Cost)</th>
+<th class="py-2 px-space-sm">Manager Sign-off</th>
+<th class="py-2 px-space-sm rounded-r text-center">RTV Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-semibold">INC-8921</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">#BLR-01 Indiranagar</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block">Kissan Mixed Fruit Jam 500g</span>
+<span class="text-[10px] text-secondary font-mono">SKU: KIS-JAM-500 • Lot #B821</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-semibold">Broken Glass Container</span>
+<span class="block text-[10px] text-on-surface-variant">Dropped during aisle shelving</span>
+</td>
+<td class="py-2.5 px-space-sm text-center font-mono font-bold text-error">2 Jars</td>
+<td class="py-2.5 px-space-sm text-right font-mono font-bold text-on-surface">₹320.00</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-700 text-[16px]">check_circle</span>
+<span class="text-on-surface">Vikramaditya (MD)</span>
+</div>
+<span class="text-[10px] text-secondary font-mono">Photo proof attached #IMG-91</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">Internal Write-off</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-semibold">INC-8920</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">#BLR-02 Koramangala</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block">Nandini Curd 400g Pouch</span>
+<span class="text-[10px] text-secondary font-mono">SKU: KMF-CRD-400 • Expired</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-red-100 text-red-900 font-semibold">Cold Chain Leak / Expiry</span>
+<span class="block text-[10px] text-on-surface-variant">Chiller thermostat fluctuation</span>
+</td>
+<td class="py-2.5 px-space-sm text-center font-mono font-bold text-error">12 Pouches</td>
+<td class="py-2.5 px-space-sm text-right font-mono font-bold text-on-surface">₹408.00</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-700 text-[16px]">check_circle</span>
+<span class="text-on-surface">S. Deshmukh (Mgr)</span>
+</div>
+<span class="text-[10px] text-secondary font-mono">Debit Note #DN-KMF-881</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">RTV to Distributor</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-semibold">INC-8919</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">#BLR-03 Whitefield</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-semibold text-on-surface block">Aashirvaad Shudh Chakki Atta 10kg</span>
+<span class="text-[10px] text-secondary font-mono">SKU: ITC-ATT-10K • Bag Rip</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-semibold">Transit Puncture</span>
+<span class="block text-[10px] text-on-surface-variant">Forklift pallet snag at unloading</span>
+</td>
+<td class="py-2.5 px-space-sm text-center font-mono font-bold text-error">1 Bag</td>
+<td class="py-2.5 px-space-sm text-right font-mono font-bold text-on-surface">₹485.00</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-700 text-[16px]">check_circle</span>
+<span class="text-on-surface">K. Nair (Store Mgr)</span>
+</div>
+<span class="text-[10px] text-secondary font-mono">Repacked for bakery kitchen</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">Repurposed</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-xl flex items-center justify-between flex-wrap gap-space-sm shadow-xs">
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold text-on-surface uppercase tracking-wider">Terminal Hotkeys:</span>
+<div class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-lowest rounded shadow-xs font-mono font-bold text-on-surface">[F2]</kbd>
+<span>New PO</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-lowest rounded shadow-xs font-mono font-bold text-on-surface">[F3]</kbd>
+<span>Quick GRN Entry</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-lowest rounded shadow-xs font-mono font-bold text-on-surface">[Ctrl+F]</kbd>
+<span>Search Slips</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-lowest rounded shadow-xs font-mono font-bold text-on-surface">[Shift+T]</kbd>
+<span>New Transfer</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-lowest rounded shadow-xs font-mono font-bold text-on-surface">[Alt+A]</kbd>
+<span>Approve Pending PO</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span>GST E-Way Bill Portal: Connected</span>
+<span class="text-outline-variant">•</span>
+<span>Tally ERP Sync: Active (0 lag)</span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

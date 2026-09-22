@@ -1,0 +1,1 @@
+powershell -Command "Remove-Item 'C:\\coding\\VYORA\\cleanup.ps1' -Force; Remove-Item 'C:\\coding\\VYORA\\cleanup_parallel_ai.ps1' -Force; Remove-Item 'C:\\coding\\VYORA\\simple_cleanup.ps1' -Force; Remove-Item 'C:\\coding\\VYORA\\remove_vyora_copyright.ps1' -Force; Write-Host \"✓ Redundant cleanup scripts removed\""

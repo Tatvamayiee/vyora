@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#ffdbce", "surface-tint": "#a73a00", "on-primary-fixed": "#370e00", "primary": "#a33900", "on-tertiary-fixed": "#0d1c2f", "tertiary-fixed-dim": "#b9c7e0", "on-secondary-container": "#5c647a", "secondary-container": "#dae2fd", "surface-container-high": "#e6e8ea", "on-error-container": "#93000a", "on-secondary-fixed": "#131b2e", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "surface-container-low": "#f2f4f6", "surface": "#f7f9fb", "surface-bright": "#f7f9fb", "inverse-surface": "#2d3133", "on-surface": "#191c1e", "on-tertiary-fixed-variant": "#3a485c", "primary-fixed-dim": "#ffb599", "error-container": "#ffdad6", "on-error": "#ffffff", "inverse-primary": "#ffb599", "inverse-on-surface": "#eff1f3", "surface-container-lowest": "#ffffff", "on-surface-variant": "#5a4138", "on-tertiary-container": "#fdfcff", "on-primary-fixed-variant": "#7f2b00", "on-primary": "#ffffff", "secondary-fixed": "#dae2fd", "on-secondary": "#ffffff", "secondary-fixed-dim": "#bec6e0", "surface-container": "#eceef0", "background": "#f7f9fb", "surface-dim": "#d8dadc", "primary-container": "#cc4900", "surface-container-highest": "#e0e3e5", "outline-variant": "#e2bfb2", "tertiary": "#4f5d72", "tertiary-fixed": "#d5e3fd", "outline": "#8e7166", "error": "#ba1a1a", "on-secondary-fixed-variant": "#3f465c", "tertiary-container": "#67758c", "surface-variant": "#e0e3e5", "secondary": "#565e74", "on-background": "#191c1e" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "1.5rem" }, fontFamily: { "display-lg": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "numeric-pos": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"] }, fontSize: { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "numeric-pos": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><a class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="role-selection" href="#" title="Back to Role Selection"><span class="material-symbols-outlined text-[20px]">swap_horiz</span></a><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-primary font-bold uppercase">VYORA</span><span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase leading-none font-semibold">Retail</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">storefront</span><span class="font-label-sm text-label-sm truncate font-medium text-on-surface">Indiranagar Flagship</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1WoJZB4ve-SkBJx8XyXn5cbW1RDoiCChsJ0pf_dDazSfvTiEmiHsLwoKP9we5j8hhUNA6eDkgdIcobZYltGKP33PbSRrtOtxJggcQx74TEpjJq4MBpk5qo1k1_yud7CKjXGe371DEPBBtJQ-te7yHAaNDbR5SwE2gawxbrsi3dxCWIPGal26Tm58SEJe3N5OFonlF2HhVEm0WZy-nmsh9kmJWZHFfRuhhIhyu3tu5rhaCVmW_oLvDLKTjqO0m3USLRIxy2uCg6iMg"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface flex-grow"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="absolute -right-12 -top-12 w-36 h-36 bg-gradient-to-br from-primary-fixed/60 to-transparent rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm ring-2 ring-primary-fixed" data-alt="Warm studio portrait of Ananya Sharma, an Indian woman in her late 20s smiling softly, wearing a chic beige linen blazer against a bright clean neutral studio backdrop with soft warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV2JL8tzqLc9slAdZV3L0ynf7PNjJr6odUvnEyVvi4_eYAn_tj1MGq8chyk9a8dsW24Zx2qBElRlglcu9ZniEi4Z7WPYBagE1Xj-UkBvFEhXeuM2FMBTSSC5TK1lRJzot_gybMkHIFIgoBZXCRGgwvnilgREhFvkXdwWQgF74o9_YbVeDLY70UEIu8SIc6XKtEDMJrVUWjkbHygqTztqgbA_s1Tz3iky0lRYUNu3bFzFDZGYe5Eyg72w"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-0.5 flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Ananya Sharma</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+91 98450 12345</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                Gold VIP
+              </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">#VY-8849-0129</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary transition-colors shadow-xs" id="qrToggleBtn" title="Digital Member Card">
+<span class="material-symbols-outlined text-[22px]">qr_code_2</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+<span class="font-label-md text-label-md font-bold">1,420 Vyora Coins</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">₹142.00 Value</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 71%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Member since Nov 2023</span>
+<span>580 coins to Platinum</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1 border-t border-surface-container">
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px]">storefront</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary Hub</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Indiranagar Flagship</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-[18px]">receipt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Life Orders</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">42 In-Store Visits</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center p-1 bg-surface-container-high rounded-lg">
+<button class="flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5" id="tabCustomerBtn">
+<span class="material-symbols-outlined text-[16px]">manage_accounts</span>
+        Account &amp; Hub
+      </button>
+<button class="flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5" id="tabDesignSystemBtn">
+<span class="material-symbols-outlined text-[16px]">style</span>
+        UI System Spec
+      </button>
+</div>
+<div class="flex flex-col gap-space-lg" id="customerTabContent">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Omnichannel Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant receipts &amp; status delivery</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">4 Active</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container">
+<div class="py-2.5 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-emerald-600 text-[20px]">chat</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Instant WhatsApp e-Bills</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero-paper PDF + GST invoice on billing</span>
+</div>
+</div>
+<button aria-checked="true" class="pref-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+<div class="py-2.5 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">sms</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">SMS Bill &amp; OTP Alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Auth codes &amp; short payment verification</span>
+</div>
+</div>
+<button aria-checked="true" class="pref-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+<div class="py-2.5 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">local_offer</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Promos &amp; Flash Discounts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Gourmet, Organic &amp; Bakery only</span>
+</div>
+</div>
+<button aria-checked="true" class="pref-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+<div class="py-2.5 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-amber-600 text-[20px]">timer</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Expiry Watchdog &amp; Loyalty</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Coin burn alarms 7 days before lapse</span>
+</div>
+</div>
+<button aria-checked="true" class="pref-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">family_restroom</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Family Pool &amp; Shared Spend</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linked member cards under master wallet</p>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">add</span> Add
+          </button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between mt-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Clean corporate headshot portrait of Rahul Sharma, an Indian man in his early 30s with trimmed beard wearing a casual charcoal crewneck against light studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCNffvb-FHMkpwJSIKP5sPpUune6GEvZZrP8TDsfPvO9qp2sDfUdz9v2dAIuW7UpqLd5LTwSPcmyX8pZqDSUiC087EoiUexKt0faXULHyzfLU2uSrpH1s7kmB1Wshs29GfKvgQVp3-sVRVad0f8JgtdfJaKohSpeahSl9mvqWXzNT_PrBENOKLWPROwYZxwvsJ9XZTv5PUpqDqgvVJdOzOzew6yUsxA4mKKhSrLpVPZ1T2MAagVMGefQ"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Rahul Sharma</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[10px] font-semibold">Secondary</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Limit: ₹5,000 / mo • 840 Coins pooled</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Payment &amp; Pickup Route</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-[12px] shadow-xs">
+                UPI
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">ananya@oksbi</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-medium">Default Auto-Debited for Scan &amp; Go</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">verified</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">location_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Home Delivery Dispatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">#402, 12th Main, HAL 2nd Stage, Indiranagar, Bengaluru 560038</span>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface p-1">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">store</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Express Click &amp; Collect Till</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Indiranagar Hub Express Counter #01</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-lg" id="designSystemSection">
+<div class="flex items-center justify-between border-b border-surface-container pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Vyora OS Component Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Global Design System Sheet</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">v3.4.2 Active</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_button</span>
+            Button Matrix &amp; Key Triggers
+          </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dense utility states</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Primary [F12 / Enter]</span>
+<button class="w-full h-10 px-3 rounded bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-md text-label-md font-semibold flex items-center justify-between shadow-sm transition">
+<span>Checkout</span>
+<span class="text-[10px] bg-white/20 px-1 py-0.5 rounded tracking-widest">[F12]</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Primary Loading</span>
+<button class="w-full h-10 px-3 rounded bg-primary/70 text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<svg class="animate-spin h-4 w-4 text-white" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Syncing Till...</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Secondary Dark [Hold]</span>
+<button class="w-full h-10 px-3 rounded bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md font-semibold flex items-center justify-between shadow-sm transition">
+<span>Hold Cart</span>
+<span class="text-[10px] bg-white/20 px-1 py-0.5 rounded tracking-widest">[F4]</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Secondary Muted</span>
+<button class="w-full h-10 px-3 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Print Dupl.</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Destructive / Void</span>
+<button class="w-full h-10 px-3 rounded bg-error hover:bg-red-700 text-on-error font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition shadow-xs">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>Void Basket</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">Disabled Action</span>
+<button class="w-full h-10 px-3 rounded bg-surface-container-highest text-on-surface-variant/40 font-label-md text-label-md font-semibold flex items-center justify-center gap-1 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>Supervisor Lock</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">input</span>
+            Form &amp; Input Validation Matrix
+          </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live States</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Standard Hardware Scanner Input</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-primary text-[18px]">barcode_scanner</span>
+<input class="w-full h-9 pl-9 pr-8 bg-surface-container-low rounded font-label-md text-label-md text-on-surface border-0 focus:outline-none focus:ring-2 focus:ring-primary transition-shadow" type="text" value="8901030948831"/>
+<span class="absolute right-2.5 text-emerald-600 material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Tax Identification / GSTIN</label>
+<span class="font-label-sm text-label-sm text-error font-medium">Checksum error</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-error text-[18px]">error</span>
+<input class="w-full h-9 pl-9 pr-3 bg-red-50/70 rounded font-label-md text-label-md text-error focus:outline-none ring-1 ring-error" type="text" value="29AAACV2940B1"/>
+</div>
+<span class="font-body-sm text-body-sm text-error">Invalid GSTIN format. Missing last check character (e.g. 29AAAAA0000A1Z5)</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" id="cb1" type="checkbox"/>
+<label class="font-label-md text-label-md text-on-surface font-medium cursor-pointer" for="cb1">Auto-Roundoff</label>
+</div>
+<span class="text-[10px] text-emerald-700 bg-emerald-100 px-1 py-0.5 rounded font-bold">₹0.35</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary accent-primary" id="rd1" name="taxMode" type="radio"/>
+<label class="font-label-md text-label-md text-on-surface font-medium cursor-pointer" for="rd1">Inclusive GST</label>
+</div>
+<span class="text-[10px] text-on-surface-variant font-medium">B2C</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+          Operational Badges &amp; Role Chips
+        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+            Cloud Synced
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+            Offline Queue (14)
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-red-100 text-red-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-red-600"></span>
+            Payment Gateway Flap
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">shield_person</span>
+            Store Manager
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+            Cashier Till #04
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">loyalty</span>
+            Vyora VIP Club
+          </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">campaign</span>
+          Telemetry &amp; Toast Notification Engine
+        </h3>
+<div class="flex flex-col gap-space-xs">
+<div class="p- space-sm p-3 rounded-lg bg-emerald-50 text-emerald-950 flex items-start gap-2.5 shadow-xs">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold">GRN Verified &amp; Stock Ledger Updated</span>
+<span class="font-body-sm text-body-sm text-emerald-800">Batch #VY-4901 (48 SKU items) successfully assigned to Indiranagar Aisle 4.</span>
+</div>
+<button class="text-emerald-700 hover:text-emerald-900"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="p-3 rounded-lg bg-amber-50 text-amber-950 flex items-start gap-2.5 shadow-xs">
+<span class="material-symbols-outlined text-amber-600 text-[20px] shrink-0 mt-0.5">battery_alert</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold">Scanner Battery Critical (&lt;12%)</span>
+<span class="font-body-sm text-body-sm text-amber-800">Wireless handheld scanner at Counter 02 requires dock charge immediately.</span>
+</div>
+<button class="text-amber-700 hover:text-amber-900"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="p-3 rounded-lg bg-red-50 text-red-950 flex items-start gap-2.5 shadow-xs">
+<span class="material-symbols-outlined text-red-600 text-[20px] shrink-0 mt-0.5">wifi_off</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold">Payment Gateway Timeout</span>
+<span class="font-body-sm text-body-sm text-red-800">HDFC POS switch dropped. Fallback to Local Encrypted Offline Journal enabled.</span>
+</div>
+<button class="text-red-700 hover:text-red-900"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="p-3 rounded-lg bg-blue-50 text-blue-950 flex items-start gap-2.5 shadow-xs">
+<span class="material-symbols-outlined text-blue-600 text-[20px] shrink-0 mt-0.5">sync_alt</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold">New FMCG Promotion Synced</span>
+<span class="font-body-sm text-body-sm text-blue-800">Buy 2 Get 1 Organic Harvest policy live across all till terminals.</span>
+</div>
+<button class="text-blue-700 hover:text-blue-900"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">hourglass_empty</span>
+          Delightful Empty States &amp; Skeleton Renders
+        </h3>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col items-center text-center gap-2">
+<div class="w-16 h-16 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[32px]">shopping_bag</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">All Bills Settled &amp; Reconciled</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+              There are no pending draft baskets or unpaid checkout sessions for this terminal. Tap scan to initiate a fresh cart.
+            </p>
+<button class="mt-2 px-4 py-2 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+              Start New Basket
+            </button>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Content Shimmer Placeholder</span>
+<span class="font-label-sm text-label-sm text-primary font-bold animate-pulse">Loading Ledger...</span>
+</div>
+<div class="flex items-center gap-space-sm animate-pulse">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest"></div>
+<div class="flex flex-col gap-1.5 flex-1">
+<div class="h-3.5 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-2.5 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+<div class="h-6 w-16 bg-surface-container-highest rounded"></div>
+</div>
+<div class="flex items-center gap-space-sm animate-pulse opacity-70">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest"></div>
+<div class="flex flex-col gap-1.5 flex-1">
+<div class="h-3.5 bg-surface-container-highest rounded w-2/3"></div>
+<div class="h-2.5 bg-surface-container-highest rounded w-1/3"></div>
+</div>
+<div class="h-6 w-16 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-gradient-to-r from-primary/10 via-primary-fixed/20 to-transparent flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Screen 16 of 16 Complete</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vyora Retail OS Architecture Finalized</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center hover:scale-105 transition" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4" id="qrModal">
+<div class="bg-surface-container-lowest rounded-2xl p-6 w-full max-w-xs shadow-2xl flex flex-col items-center text-center gap-3 relative">
+<button class="absolute top-3 right-3 text-secondary hover:text-on-surface p-1" id="closeQrModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[28px]">qr_code_scanner</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Ananya Sharma</span>
+<span class="font-label-sm text-label-sm text-secondary -mt-2">Member ID: VY-8849-0129</span>
+<div class="p-3 bg-white rounded-xl shadow-inner my-1">
+<svg class="w-48 h-48" fill="currentColor" viewbox="0 0 100 100">
+<path d="M0,0 h30 v30 h-30 z M5,5 v20 h20 v-20 z M10,10 h10 v10 h-10 z" fill="#191c1e"></path>
+<path d="M70,0 h30 v30 h-30 z M75,5 v20 h20 v-20 z M80,10 h10 v10 h-10 z" fill="#191c1e"></path>
+<path d="M0,70 h30 v30 h-30 z M5,75 v20 h20 v-20 z M10,80 h10 v10 h-10 z" fill="#191c1e"></path>
+<circle cx="50" cy="50" fill="#a33900" r="12"></circle>
+<path d="M35,10 h8 v8 h-8 z M50,5 h10 v6 h-10 z M62,18 h6 v8 h-6 z M35,28 h5 v5 h-5 z" fill="#191c1e"></path>
+<path d="M10,40 h6 v10 h-6 z M22,38 h12 v6 h-12 z M8,54 h8 v10 h-8 z M20,58 h10 v8 h-10 z" fill="#191c1e"></path>
+<path d="M68,36 h8 v10 h-8 z M80,45 h10 v8 h-10 z M66,54 h14 v6 h-14 z M74,64 h12 v6 h-12 z" fill="#191c1e"></path>
+<path d="M36,72 h6 v12 h-6 z M48,68 h10 v6 h-10 z M38,88 h8 v6 h-8 z M52,82 h12 v8 h-12 z" fill="#191c1e"></path>
+</svg>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Present at POS counter scanner for instantaneous profile lookup &amp; loyalty redemption.</p>
+<button class="w-full py-2 bg-surface-container text-on-surface rounded font-label-md text-label-md font-semibold" id="closeQrModalBtn">Done</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const tabCustomerBtn = document.getElementById('tabCustomerBtn');
+    const tabDesignSystemBtn = document.getElementById('tabDesignSystemBtn');
+    const customerTabContent = document.getElementById('customerTabContent');
+    const designSystemSection = document.getElementById('designSystemSection');
+
+    function selectTab(isCustomer) {
+      if (isCustomer) {
+        tabCustomerBtn.className = "flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5";
+        tabDesignSystemBtn.className = "flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5";
+        customerTabContent.classList.remove('hidden');
+        customerTabContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        tabDesignSystemBtn.className = "flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5";
+        tabCustomerBtn.className = "flex-1 py-1.5 px-space-sm rounded font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5";
+        designSystemSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    if (tabCustomerBtn && tabDesignSystemBtn) {
+      tabCustomerBtn.addEventListener('click', () => selectTab(true));
+      tabDesignSystemBtn.addEventListener('click', () => selectTab(false));
+    }
+
+    const toggles = document.querySelectorAll('.pref-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const isChecked = toggle.getAttribute('aria-checked') === 'true';
+        const thumb = toggle.querySelector('span');
+        if (isChecked) {
+          toggle.setAttribute('aria-checked', 'false');
+          toggle.classList.remove('bg-primary');
+          toggle.classList.add('bg-surface-container-highest');
+          thumb.classList.remove('translate-x-5');
+          thumb.classList.add('translate-x-0');
+        } else {
+          toggle.setAttribute('aria-checked', 'true');
+          toggle.classList.add('bg-primary');
+          toggle.classList.remove('bg-surface-container-highest');
+          thumb.classList.add('translate-x-5');
+          thumb.classList.remove('translate-x-0');
+        }
+      });
+    });
+
+    const qrToggleBtn = document.getElementById('qrToggleBtn');
+    const qrModal = document.getElementById('qrModal');
+    const closeQrModal = document.getElementById('closeQrModal');
+    const closeQrModalBtn = document.getElementById('closeQrModalBtn');
+
+    if (qrToggleBtn && qrModal) {
+      qrToggleBtn.addEventListener('click', () => qrModal.classList.remove('hidden'));
+      if (closeQrModal) closeQrModal.addEventListener('click', () => qrModal.classList.add('hidden'));
+      if (closeQrModalBtn) closeQrModalBtn.addEventListener('click', () => qrModal.classList.add('hidden'));
+      qrModal.addEventListener('click', (e) => {
+        if (e.target === qrModal) qrModal.classList.add('hidden');
+      });
+    }
+
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'profile') {
+        link.classList.add('text-primary', 'font-label-md', 'font-bold');
+        link.classList.remove('text-on-surface-variant');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+      } else {
+        link.classList.remove('text-primary', 'font-bold');
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md font-bold"><div class="grid grid-cols-4 items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm text-center">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-bills" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm text-center">My Bills</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="rewards-and-offers" href="#"><span class="material-symbols-outlined text-[22px]">loyalty</span><span class="font-label-sm text-label-sm text-center">Rewards</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm text-center">Profile</span></a></div></nav></body></html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#ffb599", "on-tertiary": "#ffffff", "on-tertiary-container": "#fdfcff", "on-secondary": "#ffffff", "tertiary": "#4f5d72", "tertiary-fixed": "#d5e3fd", "outline": "#8e7166", "secondary-fixed": "#dae2fd", "inverse-on-surface": "#eff1f3", "on-secondary-container": "#5c647a", "on-primary-container": "#fffbff", "tertiary-container": "#67758c", "primary-container": "#cc4900", "background": "#f7f9fb", "secondary-container": "#dae2fd", "on-error-container": "#93000a", "surface-container-high": "#e6e8ea", "on-secondary-fixed-variant": "#3f465c", "surface-container-lowest": "#ffffff", "surface": "#f7f9fb", "on-error": "#ffffff", "on-tertiary-fixed": "#0d1c2f", "surface-container-highest": "#e0e3e5", "on-primary-fixed-variant": "#7f2b00", "on-tertiary-fixed-variant": "#3a485c", "outline-variant": "#e2bfb2", "primary-fixed": "#ffdbce", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#bec6e0", "surface-container": "#eceef0", "surface-container-low": "#f2f4f6", "tertiary-fixed-dim": "#b9c7e0", "surface-tint": "#a73a00", "on-surface": "#191c1e", "surface-dim": "#d8dadc", "error": "#ba1a1a", "surface-variant": "#e0e3e5", "on-surface-variant": "#5a4138", "on-primary-fixed": "#370e00", "on-background": "#191c1e", "secondary": "#565e74", "inverse-surface": "#2d3133", "primary-fixed-dim": "#ffb599", "primary": "#a33900", "error-container": "#ffdad6", "on-secondary-fixed": "#131b2e", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem" }, "fontFamily": { "label-lg": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "numeric-pos": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "numeric-pos": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-surface-container-lowest border-b border-surface-container-high shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pr-space-md border-r border-surface-container-high"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">V</div><div><span class="font-label-lg text-label-lg text-on-surface tracking-tight block leading-tight">Vyora Retail OS</span><span class="font-label-sm text-label-sm text-on-surface-variant block leading-tight">Owner Command Center</span></div></div><div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded-lg border border-surface-container-high"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Store Cluster</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-1 leading-tight"><option value="all">All Branches (5 Active Stores)</option><option value="blr01">Indiranagar Flagship #BLR-01</option><option value="blr02">Koramangala Hub #BLR-02</option><option value="blr03">Whitefield Supercenter #BLR-03</option><option value="blr04">HSR Layout Store #BLR-04</option><option value="blr05">Jayanagar Express #BLR-05</option></select></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container border border-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">calendar_today</span><span class="font-label-md text-label-md text-on-surface">FY 2024-25 • Q3 Oct 2025</span><span class="ml-space-xs font-label-sm text-label-sm px-1 rounded bg-secondary-container text-on-secondary-container uppercase">₹ INR</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">5/5 Edge Nodes Online</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-secondary font-semibold">99.98% Uptime</span></div><div class="flex items-center gap-1"><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center rounded-full font-bold">3</span></button><button aria-label="System Settings" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div><div class="flex items-center gap-space-sm pl-space-md border-l border-surface-container-high"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1WoJZB4ve-SkBJx8XyXn5cbW1RDoiCChsJ0pf_dDazSfvTiEmiHsLwoKP9we5j8hhUNA6eDkgdIcobZYltGKP33PbSRrtOtxJggcQx74TEpjJq4MBpk5qo1k1_yud7CKjXGe371DEPBBtJQ-te7yHAaNDbR5SwE2gawxbrsi3dxCWIPGal26Tm58SEJe3N5OFonlF2HhVEm0WZy-nmsh9kmJWZHFfRuhhIhyu3tu5rhaCVmW_oLvDLKTjqO0m3USLRIxy2uCg6iMg"/><div class="hidden md:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface leading-tight">Vikramaditya Rao</span><span class="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-primary-fixed text-on-primary-fixed-variant leading-none">Super Admin</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Founder &amp; MD • Vyora Enterprises</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 z-40 bg-surface-container-lowest border-r border-surface-container-high flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs"><div class="px-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations Terminal</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard-and-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Dashboard &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="inventory-and-catalog" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Catalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stock-operations-and-issues" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Stock Operations &amp; Issues</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="promotions-and-offers" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions &amp; Offers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-and-branches" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Staff &amp; Branches</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="financial-reports-and-tax" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Financial Reports &amp; Tax</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-audit-and-pos-health" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span>System Audit &amp; POS Health</span></a></nav></div><div class="px-space-md pt-space-sm border-t border-surface-container-high"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">POS Sync Heartbeat</span><span class="font-label-sm text-label-sm text-emerald-700 font-bold">Synced</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[94%]"></div></div><span class="font-label-sm text-[10px] text-outline leading-none">Last poll: 12 seconds ago</span></div></div></aside><div class="pl-60"><div class="fixed top-14 left-60 right-0 h-12 z-30 bg-surface border-b border-surface-container-high flex items-center justify-between px-margin shadow-[0_1px_2px_rgba(15,23,42,0.03)]"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Range:</span><div class="inline-flex rounded-lg border border-surface-container-high bg-surface-container-lowest p-0.5" role="group"><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">Today</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">This Week</button><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-secondary text-on-secondary font-semibold" type="button">This Month</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">FY 2024-25</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1" type="button"><span>Custom</span><span class="material-symbols-outlined text-[14px]">date_range</span></button></div></div><div class="flex items-center gap-space-sm"><button class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg border border-surface-container-high bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-primary">download</span><span>Export Summary [PDF/XLSX]</span></button><button class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest border border-surface-container-high font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-secondary">autorenew</span><span>Refresh Feeds</span></button></div></div><main class="w-full pt-28 px-margin pb-12 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Action Area -->
+<div class="flex flex-col gap-space-md mb-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Marketing &amp; Campaign Engine • Automated Discount Rules</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Promotions, Dynamic Bundles &amp; Offer Studio</h1>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[16px]">file_download</span>
+<span>Export ROI Report</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[16px]">shopping_cart_checkout</span>
+<span>Simulate Cart</span>
+<span class="px-1 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px]">Alt+S</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Flash Sale Quick Trigger</span>
+<span class="px-1 py-0.5 rounded bg-surface-container-lowest/20 font-label-sm text-[10px]">F3</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Create New Promotion</span>
+<span class="px-1 py-0.5 rounded bg-white/20 font-label-sm text-[10px] text-white">F2</span>
+</button>
+</div>
+</div>
+<!-- Segmented Status Tabs & Channel Filtering -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-xs rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center gap-space-xs" role="tablist">
+<button class="px-space-md py-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" type="button">
+<span>Active</span>
+<span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center font-label-sm text-[10px]">8</span>
+</button>
+<button class="px-space-md py-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span>Scheduled</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface">4</span>
+</button>
+<button class="px-space-md py-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span>Drafts</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface">2</span>
+</button>
+<button class="px-space-md py-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span>Expired</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface">34</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm pr-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">hub</span>
+<span>Target Surface:</span>
+</div>
+<div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-lg">
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>Omnichannel (POS Tills + Mobile App)</option>
+<option>POS Counter Terminals Only</option>
+<option>Vyora Loyalty App VIP Only</option>
+<option>Quick Commerce Self-Service Kiosks</option>
+</select>
+</div>
+<div class="h-4 w-px bg-surface-container-high"></div>
+<div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Engine v4.2 Live</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Performance Bento Strip (5 Metrics) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md mb-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Active Promotions</span>
+<span class="p-1 rounded bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">8 Running</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded">+12%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">4 POS Till • 4 App Loyalty Exclusive</p>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Promo-Driven Sales</span>
+<span class="p-1 rounded bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">currency_rupee</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">₹3,84,200</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-emerald-100 text-emerald-800 font-bold">25.9% Gross</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High attach cross-sell rate</p>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[78%]"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Discount Burn Rate</span>
+<span class="p-1 rounded bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-primary">₹38,450</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">9.9% Depth</span>
+</div>
+<p class="font-body-sm text-body-sm text-emerald-700 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Min 18% floor preserved
+        </p>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[42%]"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Basket Size Uplift</span>
+<span class="p-1 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-emerald-700">+34.5%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Uplift</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">₹840 Promo vs ₹625 Regular</p>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-emerald-600 h-full w-[84%]"></div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Voucher Redemptions</span>
+<span class="p-1 rounded bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-pos text-numeric-pos text-on-surface">1,248</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded">94% Valid</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Top: DIWALI500 &amp; MILKCOMBO</p>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[94%]"></div>
+</div>
+</div>
+</div>
+<!-- Dual Pane Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left Column: Active Campaign Management & Rules Registry (62%) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Search & Advanced Filter Bar -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">rule_folder</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Campaign Rules Registry</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-bold">6 Displayed</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Sort Column" type="button">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Compact View" type="button">
+<span class="material-symbols-outlined text-[18px]">view_compact</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-xs">
+<div class="sm:col-span-7 relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-outline">search</span>
+<input class="w-full pl-8 pr-space-sm py-1.5 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-white shadow-sm" placeholder="Search Campaign ID, Promo Title, SKU, or Coupon Code..." type="text" value="STAPLECOMBO"/>
+</div>
+<div class="sm:col-span-5 flex items-center gap-space-xs">
+<select class="w-full py-1.5 px-space-xs bg-surface-container-lowest rounded-lg font-label-md text-label-md text-on-surface focus:outline-none shadow-sm cursor-pointer">
+<option>All Rule Types (BOGO, Slabs, Bundles)</option>
+<option>Bill Value % / Slabs</option>
+<option>Bundle Cross-Sell</option>
+<option>Tiered Volume Discount</option>
+<option>Dynamic FIFO Clearance</option>
+<option>Privilege Gold Loyalty</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Rules Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-[11px] uppercase tracking-wider">
+<th class="py-2 px-space-md font-semibold">Promotion &amp; Mechanism</th>
+<th class="py-2 px-space-sm font-semibold">Rule Trigger / Reward</th>
+<th class="py-2 px-space-sm font-semibold">Cluster / Scope</th>
+<th class="py-2 px-space-sm font-semibold text-right">Redemptions</th>
+<th class="py-2 px-space-sm font-semibold text-center">Status</th>
+<th class="py-2 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Item 1: Active Bill Slab -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-emerald-600 mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Festive Grocery Basket Booster</span>
+<span class="px-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[9px] uppercase font-bold">Slab</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-081</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Flat ₹200 OFF on orders &gt; ₹2,500</span>
+<span class="font-label-sm text-label-sm text-outline">Bill Subtotal Floor Trigger</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">All 5 Stores + App</span>
+<span class="font-label-sm text-[10px] text-emerald-700 font-semibold">ROI: 4.8x • Auto</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">412</span>
+<span class="font-label-sm text-[10px] text-outline block">today</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Live</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" title="Pause Rule" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View Analytics" type="button">
+<span class="material-symbols-outlined text-[16px]">analytics</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: Selected Row (Bundle Cross-Sell) -->
+<tr class="bg-primary-fixed/20 shadow-[inset_3px_0_0_0_#a33900]">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-primary font-bold">Edible Oil + Atta Mega Combo</span>
+<span class="px-1 rounded bg-primary-container text-on-primary font-label-sm text-[9px] uppercase font-bold">Combo</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-079</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Atta 5kg + Fortune Oil 1L @ ₹125</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">₹20.00 OFF Instant Discount</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Indiranagar, Koramangala</span>
+<span class="font-label-sm text-[10px] text-emerald-700 font-semibold">ROI: 6.2x • Till Chime</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-primary font-bold">184</span>
+<span class="font-label-sm text-[10px] text-outline block">today</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Active</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold">Editing</span>
+</div>
+</td>
+</tr>
+<!-- Item 3: Flash Rush BOGO -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Fresh Dairy Morning Rush BOGO</span>
+<span class="px-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] uppercase font-bold">B2G1</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-074</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Buy 2 Epigamia Yogurt get 1 Free</span>
+<span class="font-label-sm text-label-sm text-outline">Happy Hour: 07:00 - 11:00 AM</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">All Stores (POS Till)</span>
+<span class="font-label-sm text-[10px] text-emerald-700 font-semibold">ROI: 3.4x</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">98</span>
+<span class="font-label-sm text-[10px] text-outline block">today</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-100 text-amber-900">Flash Rush</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 4: AI Dynamic Markdown -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-primary-container mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Perishable Clearance Markdown</span>
+<span class="px-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] uppercase font-bold">FIFO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-085</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">35% off Dairy Batches &lt; 36h Expiry</span>
+<span class="font-label-sm text-label-sm text-outline">Dynamic Shelf Expiry Watchdog</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Whitefield #BLR-03</span>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">Cost Recovery</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">56</span>
+<span class="font-label-sm text-[10px] text-outline block">today</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-surface-container-high text-on-surface font-semibold">AI Automated</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 5: Loyalty Multiplier -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-secondary-container mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Vyora Privilege Gold Tier Bonus</span>
+<span class="px-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] uppercase font-bold">VIP</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-090</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">3x Reward Points on Personal Care</span>
+<span class="font-label-sm text-label-sm text-outline">Exclusive to Gold &amp; Platinum VIP</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Mobile App Scan</span>
+<span class="font-label-sm text-[10px] text-emerald-700 font-semibold">High Margin Dept</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">286</span>
+<span class="font-label-sm text-[10px] text-outline block">today</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-purple-100 text-purple-900">Member</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 6: Scheduled Seasonal -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-start gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-1.5 shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Diwali Mega Gifting Hamper</span>
+<span class="px-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[9px] uppercase font-bold">Festive</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PROMO-2025-092</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">15% Off dry fruits &amp; gift packs</span>
+<span class="font-label-sm text-label-sm text-outline">Starts Nov 01, 2025</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">All Branches</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-semibold">Approved by Vikramaditya</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<span class="font-label-md text-label-md text-outline font-medium">—</span>
+<span class="font-label-sm text-[10px] text-outline block">queue</span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-blue-100 text-blue-900">Scheduled</span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Bulk Action Strip -->
+<div class="p-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+<span>Select all 8 active promotions</span>
+<span class="text-outline-variant">•</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline font-semibold" type="button">Bulk Pause</button>
+<span class="text-outline-variant">•</span>
+<button class="text-secondary font-label-sm text-label-sm hover:underline font-semibold" type="button">Push Sync to Tills</button>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span>Page 1 of 4</span>
+<button class="p-1 rounded hover:bg-surface-container" disabled="" type="button"><span class="material-symbols-outlined text-[14px]">chevron_left</span></button>
+<button class="p-1 rounded hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[14px]">chevron_right</span></button>
+</div>
+</div>
+</div>
+<!-- Historical Campaign Performance Mini-Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Cluster Volume Distribution</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold">+18.2% vs target</span>
+</div>
+<div class="my-space-sm flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">₹1,82,400</span>
+<span class="font-body-sm text-body-sm text-outline">Indiranagar #BLR-01 Flagship</span>
+</div>
+<!-- Progress Bar Matrix -->
+<div class="w-32 flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[10px]">
+<span class="text-outline">Indiranagar</span>
+<span class="font-bold text-on-surface">48%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[48%]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[10px]">
+<span class="text-outline">Koramangala</span>
+<span class="font-bold text-on-surface">32%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[32%]"></div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Real-time edge polling every 60 seconds</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Automated Margin Floor</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-[10px] font-bold">18% Strict Floor</span>
+</div>
+<div class="my-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-emerald-700">Protected</span>
+<span class="font-body-sm text-body-sm text-outline">Zero deep-burn negative margins detected</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">AI auto-terminates promo if raw vendor cost surges</span>
+</div>
+</div>
+</section>
+<!-- Right Column: Interactive Create / Edit Offer Studio (38%) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Studio Header -->
+<div class="p-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">draw</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Offer Studio</h2>
+<span class="font-label-sm text-label-sm text-outline">Editing PROMO-2025-079</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Live Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Step 1: Core Identity & Validity -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 1 • Identity &amp; Trigger Horizon</span>
+<span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-medium">Campaign Display Title (POS Screen &amp; Bill Slip)</label>
+<input class="w-full px-space-sm py-1.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-white" type="text" value="Edible Oil + Atta Mega Combo"/>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-medium">Coupon Code (Optional)</label>
+<input class="w-full px-space-sm py-1.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface font-mono font-bold focus:outline-none focus:bg-white uppercase" type="text" value="STAPLECOMBO"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-medium">Max Limit Per Customer</label>
+<select class="w-full px-space-sm py-1.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-white cursor-pointer">
+<option>2 redemptions / day</option>
+<option>1 redemption / customer total</option>
+<option>Unlimited at Till</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-medium">Date &amp; Active Time Window</label>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-outline">date_range</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">24 Oct 2025 – 05 Nov 2025</span>
+<span class="text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-outline">Daily 09:00 - 22:00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-container"></div>
+<!-- Step 2: Discount Mechanism & Rule Builder -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 2 • Rule Logic &amp; SKUs</span>
+<span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span>
+</div>
+<!-- Discount Type Selection Matrix -->
+<div class="grid grid-cols-3 gap-1 mb-1">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] text-center hover:bg-surface-container transition-colors" type="button">Percentage %</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] text-center hover:bg-surface-container transition-colors" type="button">Flat Off (₹)</button>
+<button class="p-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-[11px] text-center font-bold shadow-sm" type="button">Bundle Combo</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] text-center hover:bg-surface-container transition-colors" type="button">BOGO / Free</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] text-center hover:bg-surface-container transition-colors" type="button">Tiered Volume</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] text-center hover:bg-surface-container transition-colors" type="button">Bill Value Slab</button>
+</div>
+<!-- SKU Trigger Boxes -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold">1. Customer Buys (Trigger SKU)</span>
+<span class="font-label-sm text-[10px] text-primary font-mono font-bold">FMCG-ATT-001</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">grain</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Aashirvaad Superior MP Atta 5kg</span>
+<span class="font-label-sm text-[10px] text-outline">MRP: ₹280.00 • Standard Cost: ₹232.00</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="text-outline">Min Qty:</span>
+<span class="font-bold bg-surface-container px-1.5 py-0.5 rounded">1</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold">2. Customer Gets Reward SKU at Discounted Price</span>
+<span class="font-label-sm text-[10px] text-primary font-mono font-bold">FMCG-OIL-009</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-amber-700 text-[18px]">water_drop</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fortune Sunlite Refined Oil 1L Pouch</span>
+<span class="font-label-sm text-[10px] text-outline">MRP: ₹145.00 • Regular POS Price: ₹145.00</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline">At:</span>
+<span class="font-label-md text-label-md text-primary font-bold bg-primary-fixed/40 px-2 py-0.5 rounded">₹125.00</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant px-space-xs pt-1">
+<span>Bundle Discount: <strong class="text-on-surface">₹20.00 OFF</strong></span>
+<span>Reward Item Margin: <strong class="text-emerald-700">+₹7.00/unit (6.5%)</strong></span>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-container"></div>
+<!-- Step 3: Store Cluster Target & Cashier Behavior -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 3 • Edge Cluster Deployment</span>
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Indiranagar #BLR-01</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Koramangala #BLR-02</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Whitefield #BLR-03</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container cursor-pointer">
+<span>+ HSR Layout</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container cursor-pointer">
+<span>+ Jayanagar</span>
+</span>
+</div>
+<div class="mt-1 flex flex-col gap-1 bg-surface-container-low p-space-xs rounded-lg">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Auto-apply in POS terminal when both barcodes scanned</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Play affirmative dual-tone chime on Cashier screen</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-surface-container"></div>
+<!-- Step 4: Real-Time Basket Simulation & Profit Guardrail -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Step 4 • Sandbox Cart Verification</span>
+<span class="font-label-sm text-[10px] text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded font-bold uppercase">Passed Guardrail</span>
+</div>
+<!-- Mini Terminal Basket Preview -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm pb-1 border-b border-surface-container">
+<span class="font-mono text-outline">SIMULATED BASKET (TILL #02)</span>
+<span class="font-bold text-on-surface">2 Items</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface">1x Aashirvaad Atta 5kg</span>
+<span class="font-mono text-on-surface">₹280.00</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface">1x Fortune Oil 1L Pouch</span>
+<span class="font-mono text-on-surface">₹145.00</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-primary font-semibold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_offer</span>
+<span>Bundle Discount (STAPLECOMBO)</span>
+</span>
+<span class="font-mono">-₹20.00</span>
+</div>
+<div class="h-px bg-surface-container my-0.5"></div>
+<div class="flex items-center justify-between font-headline-sm text-headline-sm">
+<span class="text-on-surface">Net Total Payable:</span>
+<span class="font-mono text-primary font-bold">₹405.00</span>
+</div>
+<div class="flex items-center justify-between bg-emerald-50 text-emerald-800 p-space-xs rounded-lg font-label-sm text-label-sm mt-1">
+<span>Customer Saves: <strong>₹20.00</strong></span>
+<span>Net Basket Margin: <strong class="font-bold">+21.4% (Floor &gt;18%)</strong></span>
+</div>
+</div>
+</div>
+<!-- Studio Actions -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Save &amp; Push to 5 Edge POS Clusters</span>
+<span class="px-1.5 py-0.5 rounded bg-white/20 font-label-sm text-[10px] text-white">Alt+P</span>
+</button>
+<div class="flex items-center justify-between px-space-xs">
+<button class="text-on-surface font-label-md text-label-md hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Simulate Test Bill</span>
+</button>
+<button class="text-outline font-label-md text-label-md hover:text-error transition-colors" type="button">
+                Cancel / Revert Changes
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Operational Hotkeys & Edge Nodes Synchronization Footer -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span class="uppercase tracking-wider font-semibold">TILL HOTKEYS:</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-1 py-0.5 rounded bg-surface-container font-mono font-bold text-on-surface">[F2]</span>
+<span>New Promotion</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-1 py-0.5 rounded bg-surface-container font-mono font-bold text-on-surface">[F3]</span>
+<span>Flash Sale</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-1 py-0.5 rounded bg-surface-container font-mono font-bold text-on-surface">[Alt+S]</span>
+<span>Simulate Cart</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-1 py-0.5 rounded bg-surface-container font-mono font-bold text-on-surface">[Alt+P]</span>
+<span>Push Live to Edge Nodes</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>Engine synchronized with <strong>22 Till Terminals</strong></span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-outline">In-flight discount cache TTL: <strong>60s</strong></span>
+</div>
+</div>
+</div>
+<script>
+  (function initOfferStudio() {
+    // Keyboard Shortcuts listener for high-throughput retail operations
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'F2') {
+        e.preventDefault();
+        console.log('[Vyora Marketing Engine] Trigger: Open Create Promotion Modal');
+      } else if (e.key === 'F3') {
+        e.preventDefault();
+        console.log('[Vyora Marketing Engine] Trigger: Flash Sale Quick Trigger Panel');
+      } else if (e.altKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        console.log('[Vyora Marketing Engine] Trigger: Simulate Cart Discount Calculation');
+      } else if (e.altKey && (e.key === 'p' || e.key === 'P')) {
+        e.preventDefault();
+        console.log('[Vyora Marketing Engine] Trigger: Save and Push to Edge Nodes');
+      }
+    });
+  })();
+</script></main></div></body></html>
