@@ -54,6 +54,19 @@
 			"problemMatcher": [
 				"$tsc"
 			]
+		},
+		{
+			"label": "run vyora frontend",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"client",
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
 		}
 	]
 }
