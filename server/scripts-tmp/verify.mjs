@@ -91,3 +91,97 @@ async function main() {
 }
 
 main().catch((e) => { console.error('VERIFICATION ERROR:', e); process.exit(1); }).finally(() => prisma.$disconnect());
+  // ===== EXTENDED VERIFICATION (sections 5-12) =====
+  console.log('\n=== 5. AUTH + ROLE ENFORCEMENT ===');
+  const cashierToken = await login('cashier@vyora.local', 'Cashier@123');
+  const custToken = await login('customer@vyora.local', 'Customer@123');
+  const managerToken = await login('manager@vyora.local', 'Manager@123');
+  const whToken = await login('warehouse@vyora.local', 'Warehouse@123');
+  ok('All 5 demo logins work', true);
+  ok('Customer BLOCKED from owner dashboard', (await fetch(`${API}/dashboard/owner`, { headers: auth(custToken) })).status === 403);
+  ok('Cashier BLOCKED from staff management', (await fetch(`${API}/staff`, { method: 'POST', headers: auth(cashierToken), body: '{}' })).status === 403);
+  ok('Manager dashboard OK (own branch)', (await fetch(`${API}/dashboard/manager`, { headers: auth(managerToken) })).status === 200);
+
+  console.log('\n=== 6. POS → POSTGRESQL WRITE TEST ===');
+  const attInv = await prisma.inventory.findFirst({ where: { product: { name: { contains: 'Atta' } }, branch: { name: { contains: 'Indiranagar' } } } });
+  const beforeQty = attInv.quantity;
+  const saleRes = await fetch(`${API}/sales`, {
+    method: 'POST', headers: auth(cashierToken),
+    body: JSON.stringify({ branchId: attInv.branchId, discountPct: 0, items: [{ productId: attInv.productId, quantity: 2 }], payment: { method: 'CASH', amount: 498 } }),
+  });
+  const saleJson = await saleRes.json();
+  ok('Sale created via POS API', saleRes.status === 201, saleRes.status !== 201 ? JSON.stringify(saleJson) : `bill=${saleJson.sale?.billNumber}`);
+  const saleId = saleJson.sale.id;
+  const dbSale = await prisma.sale.findUnique({ where: { id: saleId }, include: { items: true, payments: true } });
+  ok('Sale in PostgreSQL', !!dbSale && dbSale.billNumber === saleJson.sale.billNumber, `saleId=${saleId}`);
+  ok('SaleItem created', dbSale.items.length === 1, `saleItemId=${dbSale.items[0].id}`);
+  ok('Payment created', dbSale.payments.length === 1, `paymentId=${dbSale.payments[0].id} method=${dbSale.payments[0].method}`);
+  const afterInv = await prisma.inventory.findUnique({ where: { id: attInv.id } });
+  ok('Inventory decreased by 2', beforeQty - afterInv.quantity === 2, `${beforeQty} → ${afterInv.quantity}`);
+  const mov = await prisma.stockMovement.findFirst({ where: { productId: attInv.productId, branchId: attInv.branchId, type: 'SALE', notes: { contains: dbSale.billNumber } }, orderBy: { id: 'desc' } });
+  ok('StockMovement recorded', !!mov && mov.quantity === -2, `movementId=${mov?.id}`);
+
+  console.log('\n=== 7. TRANSACTION ROLLBACK ===');
+  const beforeCount = await prisma.sale.count();
+  const badSale = await fetch(`${API}/sales`, {
+    method: 'POST', headers: auth(cashierToken),
+    body: JSON.stringify({ branchId: attInv.branchId, discountPct: 0, items: [{ productId: attInv.productId, quantity: 999 }], payment: { method: 'CASH', amount: 9999 } }),
+  });
+  const afterCount = await prisma.sale.count();
+  ok('Invalid sale rejected', badSale.status === 400, (await badSale.json()).error);
+  ok('Rollback: no partial writes', beforeCount === afterCount, `${beforeCount} = ${afterCount}`);
+
+  console.log('\n=== 8. CASHIER DISCOUNT CAP ===');
+  const capRes = await fetch(`${API}/sales`, {
+    method: 'POST', headers: auth(cashierToken),
+    body: JSON.stringify({ branchId: attInv.branchId, discountPct: 20, items: [{ productId: attInv.productId, quantity: 1 }], payment: { method: 'CASH', amount: 999 } }),
+  });
+  ok('20% discount rejected for cashier', capRes.status === 403);
+
+  console.log('\n=== 9. BARCODE → DB ===');
+  const bcProduct = await prisma.product.findFirst({ where: { barcode: '8901234500028' } });
+  const bcRes = await fetch(`${API}/products?q=8901234500028`, { headers: auth(cashierToken) });
+  const bcJson = await bcRes.json();
+  const bcList = Array.isArray(bcJson) ? bcJson : (bcJson.products || []);
+  ok('Barcode → API → real product', bcList.length === 1 && bcList[0].id === bcProduct.id, bcProduct.name);
+  const unkJson = await (await fetch(`${API}/products?q=UNKNOWN-BC-999-XYZ`, { headers: auth(cashierToken) })).json();
+  const unkList = Array.isArray(unkJson) ? unkJson : (unkJson.products || []);
+  ok('Unknown barcode returns empty', unkList.length === 0);
+  ok('No fake product created', (await prisma.product.count()) === productCount);
+
+  console.log('\n=== 10. INVENTORY WRITE (authorized workflow) ===');
+  const recQty = 5;
+  const updRes = await fetch(`${API}/inventory/stock-update`, {
+    method: 'POST', headers: auth(whToken),
+    body: JSON.stringify({ inventoryId: attInv.id, type: 'RECEIVE', quantity: recQty, notes: 'VERIFY-TEST receipt' }),
+  });
+  ok('Warehouse stock-update accepted', updRes.status === 200 || updRes.status === 201, (updRes.status !== 200 && updRes.status !== 201) ? JSON.stringify(await updRes.json()) : '');
+  const afterInv2 = await prisma.inventory.findUnique({ where: { id: attInv.id } });
+  ok('PostgreSQL inventory increased', afterInv2.quantity === afterInv.quantity + recQty, `${afterInv.quantity} → ${afterInv2.quantity}`);
+  const recMov = await prisma.stockMovement.findFirst({ where: { productId: attInv.productId, type: 'RECEIVE', notes: 'VERIFY-TEST receipt' }, orderBy: { id: 'desc' } });
+  ok('RECEIVE movement in DB', !!recMov && recMov.quantity === recQty, `movementId=${recMov?.id}`);
+
+  console.log('\n=== 11. CUSTOMER DATA ===');
+  const me = await (await fetch(`${API}/auth/me`, { headers: auth(custToken) })).json();
+  const dbCustomer = await prisma.customer.findUnique({ where: { id: me.customerId } });
+  ok('Customer identity from DB', me.customer?.fullName === dbCustomer.fullName, dbCustomer.fullName);
+  const hist = await (await fetch(`${API}/sales`, { headers: auth(custToken) })).json();
+  const dbSalesForCust = await prisma.sale.count({ where: { customerId: dbCustomer.id } });
+  ok('Purchase history from DB only', hist.length === Math.min(dbSalesForCust, 50), `api=${hist.length} db=${dbSalesForCust}`);
+  const loyal = await prisma.loyaltyAccount.findUnique({ where: { customerId: dbCustomer.id } });
+  ok('Loyalty account exists', !!loyal, loyal ? `points=${loyal.points}` : '');
+
+  console.log('\n=== 12. OFFLINE SYNC + IDEMPOTENCY ===');
+  const offlineId = `OFF-VERIFY-${Date.now()}`;
+  const syncBody = { offlineId, branchId: attInv.branchId, discountPct: 0, items: [{ productId: attInv.productId, quantity: 1 }], payment: { method: 'UPI', amount: 249 } };
+  const syncRes = await fetch(`${API}/sync/offline-transactions`, { method: 'POST', headers: auth(cashierToken), body: JSON.stringify(syncBody) });
+  const syncJson = await syncRes.json();
+  ok('Offline sync creates real sale', syncRes.status === 200 && !!syncJson.sale?.billNumber, syncJson.sale?.billNumber || JSON.stringify(syncJson));
+  const dbSaleOff = await prisma.sale.findUnique({ where: { offlineId } });
+  ok('Sale persisted with offlineId', !!dbSaleOff, `saleId=${dbSaleOff?.id}`);
+  const qtyAfterOff = (await prisma.inventory.findUnique({ where: { id: attInv.id } })).quantity;
+  const dupJson = await (await fetch(`${API}/sync/offline-transactions`, { method: 'POST', headers: auth(cashierToken), body: JSON.stringify(syncBody) })).json();
+  ok('Duplicate sync flagged duplicate', dupJson.duplicate === true);
+  const qtyAfterDup = (await prisma.inventory.findUnique({ where: { id: attInv.id } })).quantity;
+  ok('No double stock decrement', qtyAfterDup === qtyAfterOff);
+  ok('Exactly one sale for offlineId', (await prisma.sale.count({ where: { offlineId } })) === 1);

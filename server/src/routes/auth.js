@@ -8,7 +8,7 @@ import { HttpError } from '../middleware/error.js';
 const router = Router();
 
 const loginSchema = z.object({
-  email: z.string().email('Enter a valid email'),
+  email: z.string().refine(e => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e), 'Enter a valid email'),
   password: z.string().min(1, 'Password is required'),
   role: z.enum(['OWNER', 'MANAGER', 'EMPLOYEE', 'CUSTOMER']).optional(),
 });
@@ -56,7 +56,7 @@ router.get('/me', auth, async (req, res) => {
 // ---------- SIGN UP (self-registration per portal) ----------
 const signupSchema = z.object({
   fullName: z.string().min(2, 'Full name is required'),
-  email: z.string().email('Enter a valid email'),
+  email: z.string().refine(e => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e), 'Enter a valid email'),
   phone: z.string().regex(/^\d{10}$/, 'Enter a valid 10-digit mobile number').optional().or(z.literal('')),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   portal: z.enum(['OWNER', 'MANAGER', 'EMPLOYEE', 'CUSTOMER']),

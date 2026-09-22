@@ -27,9 +27,9 @@ export function InventoryPage({ role }: { role: 'OWNER' | 'MANAGER' | 'WAREHOUSE
   const canEdit = role === 'OWNER';
 
   const load = () => {
-    get('/inventory').then(setInv).catch(() => {});
-    get('/products').then(setProducts).catch(() => {});
-    get('/products?meta=categories').then(setCategories).catch(() => {});
+    get('/inventory').then(setInv).catch(() => { });
+    get('/products').then(setProducts).catch(() => { });
+    get('/products?meta=categories').then(setCategories).catch(() => { });
   };
   useEffect(load, []);
 

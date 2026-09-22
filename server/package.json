@@ -8,10 +8,9 @@
     "dev": "node src/index.js",
     "start": "node src/index.js",
     "seed": "node prisma/seed.js",
-    "prisma:generate": "prisma generate --schema ../prisma/schema.prisma",
-    "prisma:deploy": "prisma migrate deploy --schema ../prisma/schema.prisma",
-    "prisma:migrate": "prisma migrate dev --schema ../prisma/schema.prisma",
-    "db:push": "prisma db push --schema ../prisma/schema.prisma"
+    "prisma:generate": "prisma generate",
+    "prisma:deploy": "prisma migrate deploy",
+    "db:push": "prisma db push"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
@@ -23,7 +22,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.23.0",
+    "pg": "^8.13.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

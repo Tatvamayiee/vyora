@@ -31,9 +31,9 @@ export function StockPage({ role }: { role: 'OWNER' | 'MANAGER' | 'WAREHOUSE' })
   const nav = role === 'WAREHOUSE' ? NAV_WAREHOUSE : NAV_OWNER;
 
   const load = () => {
-    get('/inventory/movements').then(setMovements).catch(() => {});
-    get('/inventory/issues').then(setIssues).catch(() => {});
-    get('/inventory').then(setInventory).catch(() => {});
+    get('/inventory/movements').then(setMovements).catch(() => { });
+    get('/inventory/issues').then(setIssues).catch(() => { });
+    get('/inventory').then(setInventory).catch(() => { });
   };
   useEffect(load, []);
 

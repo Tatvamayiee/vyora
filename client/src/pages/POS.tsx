@@ -29,9 +29,9 @@ export function CashierPOS() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   const load = () => {
-    get('/products?active=1').then(setProducts).catch(() => {});
-    get('/customers').then(setCustomers).catch(() => {});
-    getPendingTxs().then((t) => setPendingCount(t.filter((x) => x.status === 'PENDING_SYNC').length)).catch(() => {});
+    get('/products?active=1').then(setProducts).catch(() => { });
+    get('/customers').then(setCustomers).catch(() => { });
+    getPendingTxs().then((t) => setPendingCount(t.filter((x) => x.status === 'PENDING_SYNC').length)).catch(() => { });
   };
   useEffect(load, []);
   useEffect(() => { if (online) syncPending(); }, [online]);
@@ -257,7 +257,7 @@ export function BillModal({ sale, onClose }: { sale: any; onClose: () => void })
 export function RecentBills() {
   const [sales, setSales] = useState<any[]>([]);
   const [bill, setBill] = useState<any>(null);
-  useEffect(() => { get('/sales').then(setSales).catch(() => {}); }, []);
+  useEffect(() => { get('/sales').then(setSales).catch(() => { }); }, []);
   return (
     <Layout title="Recent Bills" nav={NAV}>
       <div className="card">

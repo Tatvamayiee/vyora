@@ -19,9 +19,9 @@ export function WarehouseWorkspace() {
   const [issueForm, setIssueForm] = useState({ inventoryId: '', type: 'DAMAGED', quantity: '', reason: '' });
 
   const load = () => {
-    get('/inventory').then(setInv).catch(() => {});
-    get('/inventory/issues').then(setIssues).catch(() => {});
-    get('/inventory/movements').then(setMovements).catch(() => {});
+    get('/inventory').then(setInv).catch(() => { });
+    get('/inventory/issues').then(setIssues).catch(() => { });
+    get('/inventory/movements').then(setMovements).catch(() => { });
   };
   useEffect(load, []);
 

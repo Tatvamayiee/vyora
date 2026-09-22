@@ -16,7 +16,7 @@ interface AuthCtx {
   login: (token: string, user: AuthUser) => void;
   logout: () => void;
 }
-const Ctx = createContext<AuthCtx>({ user: null, loading: true, login: () => {}, logout: () => {} });
+const Ctx = createContext<AuthCtx>({ user: null, loading: true, login: () => { }, logout: () => { } });
 export const useAuth = () => useContext(Ctx);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {

@@ -24,9 +24,9 @@ export function PromotionsPage() {
   const [editId, setEditId] = useState<number | null>(null);
 
   const load = () => {
-    get('/promotions').then(setPromos).catch(() => {});
-    get('/products?meta=categories').then(setCategories).catch(() => {});
-    get('/products').then(setProducts).catch(() => {});
+    get('/promotions').then(setPromos).catch(() => { });
+    get('/products?meta=categories').then(setCategories).catch(() => { });
+    get('/products').then(setProducts).catch(() => { });
   };
   useEffect(load, []);
 
@@ -140,8 +140,8 @@ export function StaffBranchesPage() {
   const [editBranchId, setEditBranchId] = useState<number | null>(null);
 
   const load = () => {
-    get('/staff').then(setStaff).catch(() => {});
-    get('/branches').then(setBranches).catch(() => {});
+    get('/staff').then(setStaff).catch(() => { });
+    get('/branches').then(setBranches).catch(() => { });
   };
   useEffect(load, []);
 
@@ -271,7 +271,7 @@ export function StaffBranchesPage() {
 export function ReportsPage() {
   const [sales, setSales] = useState<any[]>([]);
   const [range, setRange] = useState('month');
-  useEffect(() => { get(`/reports/sales?range=${range}`).then(setSales).catch(() => {}); }, [range]);
+  useEffect(() => { get(`/reports/sales?range=${range}`).then(setSales).catch(() => { }); }, [range]);
   return (
     <Layout title="Reports & Business Insights" nav={NAV}
       actions={<select value={range} onChange={(e) => setRange(e.target.value)} style={{ width: 'auto' }}>
